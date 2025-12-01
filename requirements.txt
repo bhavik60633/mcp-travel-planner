@@ -1,6 +1,7 @@
 streamlit
 agno>=2.2.10
 mcp
+ddgs
 openai
 icalendar
 google-search-results
