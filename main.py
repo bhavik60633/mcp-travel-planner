@@ -3,22 +3,35 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import asyncio
 
-# 🔹 IMPORT YOUR MCP AGENT (logic only, NOT FastAPI)
-from app import run_travel_planner  # app.py must NOT create FastAPI()
+# 🔹 IMPORT YOUR REAL AGENT FUNCTION
+# This must already exist in your project (you showed it earlier)
+from app import run_travel_planner  # ✅ DO NOT CHANGE if app.py contains the agent
+
+# =========================
+# FASTAPI APP
+# =========================
 
 app = FastAPI(
     title="MCP AI Travel Planner API",
+    description="Lovable-ready backend for MCP-powered travel planning",
     version="1.0.0",
 )
 
-# ✅ CORS — THIS IS WHAT LOVABLE NEEDS
+# =========================
+# CORS (REQUIRED FOR LOVABLE)
+# =========================
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # allow all origins for MVP
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# =========================
+# REQUEST MODEL
+# =========================
 
 class TripRequest(BaseModel):
     destination: str
@@ -30,22 +43,35 @@ class TripRequest(BaseModel):
     group_type: str
     preferences: str
 
+# =========================
+# HEALTH CHECK
+# =========================
+
 @app.get("/")
 def health():
     return {"status": "ok"}
 
+# =========================
+# MAIN API ENDPOINT
+# =========================
+
 @app.post("/plan-trip")
-async def plan_trip(req: TripRequest):
+async def plan_trip(request: TripRequest):
+    """
+    Generates a REAL itinerary using the MCP AI Travel Agent.
+    """
+
     try:
+        # 🔹 Call your real agent (blocking → async safe)
         itinerary = await asyncio.to_thread(
             run_travel_planner,
-            destination=req.destination,
-            num_days=req.num_days,
-            preferences=req.preferences,
-            budget=req.budget,
-            currency=req.currency,
-            openai_key=None,
-            google_maps_key=None,
+            destination=request.destination,
+            num_days=request.num_days,
+            preferences=request.preferences,
+            budget=request.budget,
+            currency=request.currency,
+            openai_key=None,          # 🔑 agent already reads env var
+            google_maps_key=None,     # 🔑 agent already reads env var
         )
 
         return {
@@ -54,4 +80,7 @@ async def plan_trip(req: TripRequest):
         }
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to generate itinerary: {str(e)}"
+        )
