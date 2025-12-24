@@ -1,7 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Optional
+import asyncio
+
+# 🔹 IMPORT YOUR REAL AGENT FUNCTION
+# This must already exist in your project (you showed it earlier)
+from app import run_travel_planner  # ✅ DO NOT CHANGE if app.py contains the agent
 
 # =========================
 # FASTAPI APP
@@ -14,12 +18,12 @@ app = FastAPI(
 )
 
 # =========================
-# CORS CONFIG (CRITICAL)
+# CORS (REQUIRED FOR LOVABLE)
 # =========================
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # allow all origins for now (Lovable, browser, etc.)
+    allow_origins=["*"],  # allow all origins for MVP
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -54,50 +58,29 @@ def health():
 @app.post("/plan-trip")
 async def plan_trip(request: TripRequest):
     """
-    This endpoint is called by Lovable via POST.
-    It returns a markdown itinerary string.
+    Generates a REAL itinerary using the MCP AI Travel Agent.
     """
 
-    # Basic validation (extra safety)
-    if not request.destination:
-        raise HTTPException(status_code=400, detail="Destination is required")
+    try:
+        # 🔹 Call your real agent (blocking → async safe)
+        itinerary = await asyncio.to_thread(
+            run_travel_planner,
+            destination=request.destination,
+            num_days=request.num_days,
+            preferences=request.preferences,
+            budget=request.budget,
+            currency=request.currency,
+            openai_key=None,          # 🔑 agent already reads env var
+            google_maps_key=None,     # 🔑 agent already reads env var
+        )
 
-    # 🔹 TEMP DEMO RESPONSE (replace with MCP agent call if needed)
-    # Your real MCP logic can stay here – this is just a safe example
-    itinerary = f"""
-## ✈️ Trip to {request.destination}
+        return {
+            "status": "success",
+            "itinerary": itinerary
+        }
 
-**Duration:** {request.num_days} days  
-**Budget:** {request.budget} {request.currency}  
-**Travelers:** {request.num_travelers}  
-**Trip Type:** {request.trip_type}  
-**Group Type:** {request.group_type}
-
----
-
-### 🗓 Day 1
-- Arrival and hotel check-in
-- Local sightseeing
-- Dinner at a recommended restaurant
-
-### 🗓 Day 2
-- Cultural attractions
-- Local food exploration
-- Evening leisure time
-
-### 🗓 Day 3
-- Shopping and relaxation
-- Departure
-
----
-
-### 🎯 Preferences Considered
-{request.preferences}
-
-Enjoy your journey! 🌍
-"""
-
-    return {
-        "status": "success",
-        "itinerary": itinerary
-    }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to generate itinerary: {str(e)}"
+        )
