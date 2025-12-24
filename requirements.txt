@@ -1,6 +1,6 @@
 fastapi
 uvicorn
 agno>=2.2.10
+mcp
 openai
 google-search-results
-mcp
