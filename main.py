@@ -1,8 +1,44 @@
+import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from app import run_travel_planner
 
+from agno.agent import Agent
+from agno.models.openai import OpenAIChat
+
+# --------------------
+# CREATE AGENT
+# --------------------
+agent = Agent(
+    model=OpenAIChat(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        model="gpt-4o-mini"
+    ),
+    instructions="""
+You are an expert travel planner.
+Create a realistic, detailed, day-wise itinerary.
+Use local places, food, timings, and travel tips.
+Do NOT return generic templates.
+"""
+)
+
+def run_travel_planner(data: dict) -> str:
+    prompt = f"""
+Destination: {data['destination']}
+Number of days: {data['num_days']}
+Budget: {data['budget']} {data['currency']}
+Number of travelers: {data['num_travelers']}
+Trip type: {data['trip_type']}
+Group type: {data['group_type']}
+Preferences: {data['preferences']}
+"""
+    result = agent.run(prompt)
+    return result.content
+
+
+# --------------------
+# FASTAPI APP
+# --------------------
 app = FastAPI()
 
 app.add_middleware(
