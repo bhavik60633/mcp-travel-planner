@@ -1,7 +1,7 @@
 # Use official Python image
 FROM python:3.11-slim
 
-# Install system tools + Node.js + npm
+# Install system dependencies + Node.js (required for MCP)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential \
@@ -13,18 +13,15 @@ RUN apt-get update && \
 # Set working directory
 WORKDIR /app
 
-# Copy and install Python dependencies
+# Copy Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the app files
+# Copy application code
 COPY . .
 
-# Streamlit settings
-ENV PYTHONUNBUFFERED=1
-ENV PORT=8501
-ENV STREAMLIT_SERVER_PORT=8501
-ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
+# Railway uses PORT env variable automatically
+EXPOSE 8000
 
-# Default command: run Streamlit app
-CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+# Start FastAPI (Lovable-ready)
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
