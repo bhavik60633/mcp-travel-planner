@@ -55,23 +55,20 @@ def health():
 # MAIN API ENDPOINT
 # =========================
 
+from travel_agent import run_travel_planner  # adjust import if needed
+
 @app.post("/plan-trip")
 async def plan_trip(request: TripRequest):
-    """
-    Generates a REAL itinerary using the MCP AI Travel Agent.
-    """
-
     try:
-        # 🔹 Call your real agent (blocking → async safe)
-        itinerary = await asyncio.to_thread(
-            run_travel_planner,
+        itinerary = run_travel_planner(
             destination=request.destination,
             num_days=request.num_days,
             preferences=request.preferences,
             budget=request.budget,
             currency=request.currency,
-            openai_key=None,          # 🔑 agent already reads env var
-            google_maps_key=None,     # 🔑 agent already reads env var
+            num_travelers=request.num_travelers,
+            trip_type=request.trip_type,
+            group_type=request.group_type,
         )
 
         return {
