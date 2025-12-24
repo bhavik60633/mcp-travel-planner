@@ -1,11 +1,12 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import asyncio
+import openai
+import os
 
-from agent import run_travel_planner  # ✅ CORRECT
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
-app = FastAPI(title="MCP AI Travel Planner API")
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -25,26 +26,44 @@ class TripRequest(BaseModel):
     group_type: str
     preferences: str
 
+
 @app.get("/")
 def health():
     return {"status": "ok"}
 
+
 @app.post("/plan-trip")
-async def plan_trip(req: TripRequest):
-    try:
-        itinerary = await asyncio.to_thread(
-            run_travel_planner,
-            destination=req.destination,
-            num_days=req.num_days,
-            preferences=req.preferences,
-            budget=req.budget,
-            currency=req.currency,
-        )
+def plan_trip(req: TripRequest):
 
-        return {
-            "status": "success",
-            "itinerary": itinerary
-        }
+    prompt = f"""
+You are a professional travel planner.
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+Create a detailed, realistic, day-wise itinerary.
+
+Destination: {req.destination}
+Days: {req.num_days}
+Budget: {req.budget} {req.currency}
+Travelers: {req.num_travelers}
+Trip type: {req.trip_type}
+Group type: {req.group_type}
+Preferences: {req.preferences}
+
+Rules:
+- Every day must be different
+- Include real places
+- Include food, transport, timing
+- Avoid generic phrases
+"""
+
+    response = openai.ChatCompletion.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.9
+    )
+
+    itinerary = response.choices[0].message.content
+
+    return {
+        "status": "success",
+        "itinerary": itinerary
+    }
