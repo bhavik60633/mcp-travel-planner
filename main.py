@@ -1,21 +1,24 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import openai
+from openai import OpenAI
 import os
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# ---------- OPENAI CLIENT ----------
+client = OpenAI(api_key=os.getenv("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"))
 
-app = FastAPI()
+# ---------- FASTAPI APP ----------
+app = FastAPI(title="MCP AI Travel Planner")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],   # Lovable needs this
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# ---------- REQUEST MODEL ----------
 class TripRequest(BaseModel):
     destination: str
     num_days: int
@@ -26,44 +29,49 @@ class TripRequest(BaseModel):
     group_type: str
     preferences: str
 
-
+# ---------- HEALTH ----------
 @app.get("/")
 def health():
     return {"status": "ok"}
 
-
+# ---------- MAIN AI ENDPOINT ----------
 @app.post("/plan-trip")
 def plan_trip(req: TripRequest):
+    try:
+        prompt = f"""
+You are an expert human travel planner.
 
-    prompt = f"""
-You are a professional travel planner.
-
-Create a detailed, realistic, day-wise itinerary.
+Create a REAL, detailed, non-repetitive itinerary.
 
 Destination: {req.destination}
 Days: {req.num_days}
 Budget: {req.budget} {req.currency}
 Travelers: {req.num_travelers}
-Trip type: {req.trip_type}
-Group type: {req.group_type}
+Trip Type: {req.trip_type}
+Group Type: {req.group_type}
 Preferences: {req.preferences}
 
 Rules:
-- Every day must be different
-- Include real places
-- Include food, transport, timing
-- Avoid generic phrases
+- Every day MUST be different
+- Use real locations
+- Include food, timing, travel
+- No generic templates
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.9
-    )
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.9
+        )
 
-    itinerary = response.choices[0].message.content
+        itinerary = response.choices[0].message.content
 
-    return {
-        "status": "success",
-        "itinerary": itinerary
-    }
+        return {
+            "status": "success",
+            "itinerary": itinerary
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
