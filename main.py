@@ -1,24 +1,32 @@
+import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from openai import OpenAI
-import os
 
-# ---------- OPENAI CLIENT ----------
-client = OpenAI(api_key=os.getenv("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"))
+# 🔑 Ensure key exists (Railway injects it)
+if not os.getenv("OPENAI_API_KEY"):
+    raise RuntimeError("OPENAI_API_KEY not found in environment")
 
-# ---------- FASTAPI APP ----------
-app = FastAPI(title="MCP AI Travel Planner")
+# 👉 IMPORT YOUR AGENT FUNCTION
+# ⚠️ app.py MUST exist and contain run_travel_planner()
+from app import run_travel_planner
 
+app = FastAPI(
+    title="MCP AI Travel Planner API",
+    version="1.0.0"
+)
+
+# 🌐 CORS (Lovable fix)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # Lovable needs this
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# ---------- REQUEST MODEL ----------
+# ---------- MODELS ----------
+
 class TripRequest(BaseModel):
     destination: str
     num_days: int
@@ -29,48 +37,32 @@ class TripRequest(BaseModel):
     group_type: str
     preferences: str
 
-# ---------- HEALTH ----------
+
+# ---------- ROUTES ----------
+
 @app.get("/")
 def health():
     return {"status": "ok"}
 
-# ---------- MAIN AI ENDPOINT ----------
+
 @app.post("/plan-trip")
 def plan_trip(req: TripRequest):
     try:
-        prompt = f"""
-You are an expert human travel planner.
-
-Create a REAL, detailed, non-repetitive itinerary.
-
-Destination: {req.destination}
-Days: {req.num_days}
-Budget: {req.budget} {req.currency}
-Travelers: {req.num_travelers}
-Trip Type: {req.trip_type}
-Group Type: {req.group_type}
-Preferences: {req.preferences}
-
-Rules:
-- Every day MUST be different
-- Use real locations
-- Include food, timing, travel
-- No generic templates
-"""
-
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0.9
+        # 🔥 THIS IS THE REAL AGENT CALL
+        itinerary_text = run_travel_planner(
+            destination=req.destination,
+            num_days=req.num_days,
+            budget=req.budget,
+            currency=req.currency,
+            num_travelers=req.num_travelers,
+            trip_type=req.trip_type,
+            group_type=req.group_type,
+            preferences=req.preferences,
         )
-
-        itinerary = response.choices[0].message.content
 
         return {
             "status": "success",
-            "itinerary": itinerary
+            "itinerary": itinerary_text
         }
 
     except Exception as e:
