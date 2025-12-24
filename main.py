@@ -7,18 +7,18 @@ from agno.agent import Agent
 from agno.models.openai import OpenAIChat
 
 # --------------------
-# CREATE AGENT
+# CREATE AGENT (FIXED)
 # --------------------
 agent = Agent(
     model=OpenAIChat(
-        api_key=os.getenv("OPENAI_API_KEY"),
-        model="gpt-4o-mini"
+        id="gpt-4o-mini",  # ✅ MUST be `id`
+        api_key=os.getenv("OPENAI_API_KEY")
     ),
     instructions="""
 You are an expert travel planner.
 Create a realistic, detailed, day-wise itinerary.
-Use local places, food, timings, and travel tips.
-Do NOT return generic templates.
+Use real places, food spots, timings, and travel tips.
+Avoid generic templates and repetition.
 """
 )
 
