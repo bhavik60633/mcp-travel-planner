@@ -3,35 +3,17 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import asyncio
 
-# 🔹 IMPORT YOUR REAL AGENT FUNCTION
-# This must already exist in your project (you showed it earlier)
-from app import run_travel_planner  # ✅ DO NOT CHANGE if app.py contains the agent
+from agent import run_travel_planner  # ✅ CORRECT
 
-# =========================
-# FASTAPI APP
-# =========================
-
-app = FastAPI(
-    title="MCP AI Travel Planner API",
-    description="Lovable-ready backend for MCP-powered travel planning",
-    version="1.0.0",
-)
-
-# =========================
-# CORS (REQUIRED FOR LOVABLE)
-# =========================
+app = FastAPI(title="MCP AI Travel Planner API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # allow all origins for MVP
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# =========================
-# REQUEST MODEL
-# =========================
 
 class TripRequest(BaseModel):
     destination: str
@@ -43,32 +25,20 @@ class TripRequest(BaseModel):
     group_type: str
     preferences: str
 
-# =========================
-# HEALTH CHECK
-# =========================
-
 @app.get("/")
 def health():
     return {"status": "ok"}
 
-# =========================
-# MAIN API ENDPOINT
-# =========================
-
-from travel_agent import run_travel_planner  # adjust import if needed
-
 @app.post("/plan-trip")
-async def plan_trip(request: TripRequest):
+async def plan_trip(req: TripRequest):
     try:
-        itinerary = run_travel_planner(
-            destination=request.destination,
-            num_days=request.num_days,
-            preferences=request.preferences,
-            budget=request.budget,
-            currency=request.currency,
-            num_travelers=request.num_travelers,
-            trip_type=request.trip_type,
-            group_type=request.group_type,
+        itinerary = await asyncio.to_thread(
+            run_travel_planner,
+            destination=req.destination,
+            num_days=req.num_days,
+            preferences=req.preferences,
+            budget=req.budget,
+            currency=req.currency,
         )
 
         return {
@@ -77,7 +47,4 @@ async def plan_trip(request: TripRequest):
         }
 
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Failed to generate itinerary: {str(e)}"
-        )
+        raise HTTPException(status_code=500, detail=str(e))
