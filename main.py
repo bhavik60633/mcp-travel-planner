@@ -3,14 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app import run_travel_planner
 
-app = FastAPI(
-    title="Yori MCP Travel Planner",
-    version="1.0.0"
-)
+app = FastAPI(title="Yori MCP Travel Planner")
 
-# -------------------------------------------------
-# CORS (Lovable + Browser SAFE)
-# -------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -18,9 +12,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# -------------------------------------------------
-# REQUEST SCHEMA
-# -------------------------------------------------
 class TripRequest(BaseModel):
     destination: str
     num_days: int
@@ -31,16 +22,10 @@ class TripRequest(BaseModel):
     group_type: str
     preferences: str
 
-# -------------------------------------------------
-# HEALTH
-# -------------------------------------------------
 @app.get("/")
 async def health():
     return {"status": "ok"}
 
-# -------------------------------------------------
-# MAIN ENDPOINT (ASYNC — REQUIRED)
-# -------------------------------------------------
 @app.post("/plan-trip")
 async def plan_trip(data: TripRequest):
     itinerary = await run_travel_planner(data.dict())
