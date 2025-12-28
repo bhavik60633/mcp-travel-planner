@@ -1,10 +1,10 @@
+# app.py
 import os
-import asyncio
 from agno.agent import Agent
 from agno.models.openai import OpenAIChat
 from agno.tools.mcp import MultiMCPTools
 
-# Create MCP tools (Node-based MCP servers)
+# Define MCP tools (Node-based)
 mcp_tools = MultiMCPTools(
     [
         "npx -y @openbnb/mcp-server-airbnb --ignore-robots-txt",
@@ -16,9 +16,6 @@ mcp_tools = MultiMCPTools(
     timeout_seconds=60
 )
 
-# Connect MCP tools ONCE at startup
-asyncio.get_event_loop().run_until_complete(mcp_tools.connect())
-
 agent = Agent(
     name="Yori MCP Travel Planner",
     model=OpenAIChat(),  # Uses OPENAI_API_KEY from Railway
@@ -26,10 +23,10 @@ agent = Agent(
     instructions="""
 You are a professional travel planner.
 
-MANDATORY RULES:
-- Use Airbnb MCP for ALL stays
+MANDATORY:
+- Use Airbnb MCP for accommodation
 - Use Google Maps MCP for distance & routing
-- NEVER invent hotels or distances
+- Never invent hotels or distances
 - If MCP fails, clearly say so
 """
 )
