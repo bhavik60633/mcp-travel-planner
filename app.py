@@ -1,35 +1,35 @@
+# app.py
+import os
 from agno.agent import Agent
 from agno.models.openai import OpenAIChat
-from agno.tools.mcp import MultiMCPTools
-
-# MCP tools (auto-detected, no manual servers)
-mcp_tools = MultiMCPTools()
 
 agent = Agent(
-    model=OpenAIChat(),
-    tools=[mcp_tools],
-    system_prompt="""
-You are Yori Travel Agent.
+    model=OpenAIChat(),  # uses OPENAI_API_KEY automatically
+    instructions="""
+You are an elite AI travel planner.
 
-Rules:
-- Use MCP tools when available (Airbnb, Maps)
-- Generate realistic itineraries
-- Split stays if requested
-- Respect distance and budget
+You MUST:
+- Use MCP servers for Airbnb and Google Maps
+- Calculate distance-based costs
+- Suggest stays, routes, and daily plans
+- Return a unique itinerary every time
+- Never return templates or generic plans
+
+If MCP data is available, ALWAYS use it.
 """
 )
 
-async def run_travel_planner(payload: dict) -> str:
+def run_travel_planner(payload: dict) -> str:
     prompt = f"""
+Plan a detailed trip.
+
 Destination: {payload['destination']}
 Days: {payload['num_days']}
 Budget: {payload['budget']} {payload['currency']}
 Travelers: {payload['num_travelers']}
-Trip Type: {payload['trip_type']}
-Group Type: {payload['group_type']}
-Preferences: {payload['preferences']}
-
-Generate a detailed itinerary.
+Preferences: {payload.get('preferences', 'None')}
 """
-    response = await agent.arun(prompt)
-    return response.content
+
+    result = agent.run(prompt)
+    return result.content
+
