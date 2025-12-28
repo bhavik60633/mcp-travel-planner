@@ -1,11 +1,16 @@
-# main.py
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from app import run_travel_planner, mcp_tools
+from app import run_travel_planner
 
-app = FastAPI(title="MCP AI Travel Planner")
+app = FastAPI(
+    title="Yori MCP Travel Planner",
+    version="1.0.0"
+)
 
+# -------------------------------------------------
+# CORS (Lovable + Browser SAFE)
+# -------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -13,33 +18,32 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# -------------------------------------------------
+# REQUEST SCHEMA
+# -------------------------------------------------
 class TripRequest(BaseModel):
     destination: str
     num_days: int
     budget: int
     currency: str
     num_travelers: int
-    trip_type: str | None = None
-    group_type: str | None = None
-    preferences: str | None = None
+    trip_type: str
+    group_type: str
+    preferences: str
 
-# 🔥 CONNECT MCP WHEN FASTAPI STARTS
-@app.on_event("startup")
-async def startup_event():
-    await mcp_tools.connect()
-
-# 🔥 CLEANUP MCP WHEN APP STOPS
-@app.on_event("shutdown")
-async def shutdown_event():
-    await mcp_tools.close()
-
+# -------------------------------------------------
+# HEALTH
+# -------------------------------------------------
 @app.get("/")
-def health():
+async def health():
     return {"status": "ok"}
 
+# -------------------------------------------------
+# MAIN ENDPOINT (ASYNC — REQUIRED)
+# -------------------------------------------------
 @app.post("/plan-trip")
-def plan_trip(data: TripRequest):
-    itinerary = run_travel_planner(data.dict())
+async def plan_trip(data: TripRequest):
+    itinerary = await run_travel_planner(data.dict())
     return {
         "status": "success",
         "itinerary": itinerary
