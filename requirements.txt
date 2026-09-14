@@ -8,6 +8,7 @@ google-search-results
 
 # Flights (TP-01)
 httpx
-flights==0.10.0
+# fli 0.10.0 isn't on PyPI (0.9.0 is the latest there); this is the commit Yori was tested with.
+flights @ https://github.com/punitarani/fli/archive/121d34fea056dc513258958c4262cb5a4cc033c1.tar.gz
 google-flights-search==0.1.21
 swoop-flights==0.7.0
