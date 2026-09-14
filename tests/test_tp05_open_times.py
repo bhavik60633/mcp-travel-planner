@@ -100,6 +100,22 @@ def test_A1_a_named_place_made_of_common_words_still_counts():
     assert [v.place for v in read_visits(itinerary)] == ["City Palace"]
 
 
+def test_A1_visits_with_the_time_range_in_bold_are_read_too():
+    # Found on Render on 15 Sep 2026: gpt-4o-mini wrote "**09:00–11:00**: **Amber Fort** — …", and no visits were read.
+    from places.schedule import read_visits, rewrite_visit
+
+    itinerary = (
+        "### Day 1: October 5, 2026 (Clear Day)\n"
+        "**09:00–11:00**: **Amber Fort** — the fort.\n"
+        "- **13:30–14:30**: Lunch at **The Royal Treat** — thali.\n"
+        "**21:30**: Return to **House of Mysa**.\n"
+    )
+
+    visits = read_visits(itinerary)
+    assert [(v.start, v.end, v.place) for v in visits] == [("09:00", "11:00", "Amber Fort"), ("13:30", "14:30", "The Royal Treat")]
+    assert "**10:00–12:00**: **Amber Fort** — the fort." in rewrite_visit(itinerary, visits[0], 600, 720, "Amber Fort")
+
+
 # --------------------------------------------------------------------------- A2
 
 

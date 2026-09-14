@@ -150,7 +150,11 @@ class StaysService:
         stays = [stay for stay in (normalize_listing(item, query) for item in raw.get("searchResults") or [] if isinstance(item, dict)) if stay]
         if query.max_per_night:
             # Airbnb's price filter isn't exact, and a stay without a price can't be shown as within the budget.
-            stays = [stay for stay in stays if stay["price_per_night"] is not None and stay["price_per_night"] <= query.max_per_night]
+            # Only rupee prices can be compared with the rupee limit; Airbnb is asked for INR (airbnb-currency.mjs).
+            stays = [
+                stay for stay in stays
+                if stay["currency"] == "INR" and stay["price_per_night"] is not None and stay["price_per_night"] <= query.max_per_night
+            ]
         outcome = StaysOutcome(stays=stays[:MAX_STAYS], search_url=raw.get("searchUrl"), cached=False)
         if outcome.stays:
             with self._lock:

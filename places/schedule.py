@@ -16,7 +16,8 @@ _DAY_HEADING = re.compile(r"^[^\w\n]{0,8}Day\s*:?\s*(\d{1,2})\b", re.IGNORECASE)
 _CLOCK = r"(\d{1,2})[:.](\d{2})\s*(?:([ap])\.?\s?m\b\.?)?"
 _VISIT = re.compile(
     # A few words may come before the place: "12:30–13:30: Lunch at **LMB (Laxmi Misthan Bhandar)**".
-    r"^\s*(?:[-*•]\s*)?(?P<range>" + _CLOCK + r"\s*[–—-]\s*" + _CLOCK + r")\s*:?\s*[^*\n]{0,40}?\*\*(?P<place>[^*\n]{2,80}?)\*\*",
+    # The time range may be in bold too: "**09:00–11:00**: **Amber Fort** — …" (seen on Render, 15 Sep 2026).
+    r"^\s*(?:[-*•]\s*)?(?:\*\*)?(?P<range>" + _CLOCK + r"\s*[–—-]\s*" + _CLOCK + r")(?:\*\*)?\s*:?\s*[^*\n]{0,40}?\*\*(?P<place>[^*\n]{2,80}?)\*\*",
     re.IGNORECASE,
 )
 

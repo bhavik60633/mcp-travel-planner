@@ -122,6 +122,30 @@ def test_D3_the_ai_is_given_only_stays_within_the_trip_budget(stays_client, monk
     assert "up to INR 4,800 a night" in prompt
 
 
+def test_D2_airbnb_is_asked_for_prices_in_rupees_wherever_the_server_runs():
+    # Found on Render (Singapore) on 15 Sep 2026: Airbnb answered in US dollars, so the rupee budget didn't apply.
+    import subprocess
+    from pathlib import Path
+
+    currency_test = Path(__file__).resolve().parents[1] / "mcp-servers" / "airbnb" / "airbnb-currency.test.mjs"
+    result = subprocess.run(["node", "--test", str(currency_test)], capture_output=True, text=True, timeout=60)
+
+    assert result.returncode == 0, result.stdout[-3000:] + result.stderr[-3000:]
+
+
+def test_D1_stays_priced_in_another_currency_are_never_compared_with_a_rupee_limit(stays_client):  # noqa: F811
+    import copy
+
+    answer = copy.deepcopy(AIRBNB_ANSWER)
+    # The first listing is ₹3,690 a night; here Airbnb answered in dollars instead.
+    answer["searchResults"][0]["structuredDisplayPrice"]["primaryLine"]["accessibilityLabel"] = "$222 for 5 nights"
+    client = stays_client(FakeAirbnb(answer=answer))
+
+    body = client.get("/api/stays", params={**STAY_PARAMS, "max_per_night": "6000"}).json()
+
+    assert [(stay["currency"], stay["price_per_night"]) for stay in body["stays"]] == [("INR", 5500)]
+
+
 # --------------------------------------------------------------------------- K1
 
 
