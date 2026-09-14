@@ -1,0 +1,56 @@
+{
+ "status": 200,
+ "body": {
+  "type": "standard",
+  "title": "Goa",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Goa</span></span>",
+  "namespace": {
+   "id": 0,
+   "text": ""
+  },
+  "wikibase_item": "Q1171",
+  "titles": {
+   "canonical": "Goa",
+   "normalized": "Goa",
+   "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Goa</span></span>"
+  },
+  "pageid": 40010153,
+  "thumbnail": {
+   "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/BeachFun.jpg/330px-BeachFun.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "width": 330,
+   "height": 186
+  },
+  "originalimage": {
+   "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/BeachFun.jpg/3840px-BeachFun.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "width": 4640,
+   "height": 2610
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1374271589",
+  "tid": "40c833b7-ad70-11f1-90c1-b007ba097738",
+  "timestamp": "2026-09-10T23:35:06Z",
+  "description": "State in Southwest India",
+  "description_source": "local",
+  "coordinates": {
+   "lat": 15.5,
+   "lon": 73.83
+  },
+  "content_urls": {
+   "desktop": {
+    "page": "https://en.wikipedia.org/wiki/Goa",
+    "revisions": "https://en.wikipedia.org/wiki/Goa?action=history",
+    "edit": "https://en.wikipedia.org/wiki/Goa?action=edit",
+    "talk": "https://en.wikipedia.org/wiki/Talk:Goa"
+   },
+   "mobile": {
+    "page": "https://en.wikipedia.org/wiki/Goa",
+    "revisions": "https://en.wikipedia.org/wiki/Special:History/Goa",
+    "edit": "https://en.wikipedia.org/wiki/Goa?action=edit",
+    "talk": "https://en.wikipedia.org/wiki/Talk:Goa"
+   }
+  },
+  "extract": "Goa is a state on the southwestern coast of India within the Konkan region. It is geographically separated from the Deccan highlands by the Western Ghats. It is bordered by the Indian states of Maharashtra to the north and Karnataka to the east and south, with the Arabian Sea forming its western coastline. It was the capital of the eastern Portuguese empire until 1961. It is India's smallest state by area and fourth-smallest by population. Panaji (Panjim) is the state's capital, while Vasco da Gama is its largest city by population. The state's official language is Konkani, spoken by the majority of its inhabitants.",
+  "extract_html": "<p><b>Goa</b> is a state on the southwestern coast of India within the Konkan region. It is geographically separated from the Deccan highlands by the Western Ghats. It is bordered by the Indian states of Maharashtra to the north and Karnataka to the east and south, with the Arabian Sea forming its western coastline. It was the capital of the eastern Portuguese empire until 1961. It is India's smallest state by area and fourth-smallest by population. Panaji (<i>Panjim</i>) is the state's capital, while Vasco da Gama is its largest city by population. The state's official language is Konkani, spoken by the majority of its inhabitants.</p>"
+ }
+}

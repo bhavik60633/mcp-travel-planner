@@ -1,0 +1,321 @@
+[
+ {
+  "airlines": [
+   "EY"
+  ],
+  "price": "INR 25994",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "AUH",
+    "flight_no": "EY219",
+    "departure": "2026-11-09 04:25",
+    "arrival": "2026-11-09 06:55",
+    "duration_min": 240,
+    "plane": "Boeing 787-10"
+   },
+   {
+    "from": "AUH",
+    "to": "CDG",
+    "flight_no": "EY33",
+    "departure": "2026-11-09 14:05",
+    "arrival": "2026-11-09 18:35",
+    "duration_min": 450,
+    "plane": "Boeing 787"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "6E",
+   "QR"
+  ],
+  "price": "INR 28349",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "DOH",
+    "flight_no": "6E1345",
+    "departure": "2026-11-09 16:10",
+    "arrival": "2026-11-09 18:25",
+    "duration_min": 285,
+    "plane": "Airbus A321"
+   },
+   {
+    "from": "DOH",
+    "to": "CDG",
+    "flight_no": "QR41",
+    "departure": "2026-11-10 01:45",
+    "arrival": "2026-11-10 06:35",
+    "duration_min": 410,
+    "plane": "Airbus A380"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "LO"
+  ],
+  "price": "INR 29268",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "WAW",
+    "flight_no": "LO72",
+    "departure": "2026-11-09 07:20",
+    "arrival": "2026-11-09 11:05",
+    "duration_min": 495,
+    "plane": "Boeing 787"
+   },
+   {
+    "from": "WAW",
+    "to": "CDG",
+    "flight_no": "LO335",
+    "departure": "2026-11-09 16:15",
+    "arrival": "2026-11-09 18:45",
+    "duration_min": 150,
+    "plane": "Boeing 737MAX 8 Passenger"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "EY"
+  ],
+  "price": "INR 29465",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "AUH",
+    "flight_no": "EY213",
+    "departure": "2026-11-09 08:55",
+    "arrival": "2026-11-09 11:35",
+    "duration_min": 250,
+    "plane": "Airbus A321neo"
+   },
+   {
+    "from": "AUH",
+    "to": "CDG",
+    "flight_no": "EY33",
+    "departure": "2026-11-09 14:05",
+    "arrival": "2026-11-09 18:35",
+    "duration_min": 450,
+    "plane": "Boeing 787"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "GF"
+  ],
+  "price": "INR 31386",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "BAH",
+    "flight_no": "GF135",
+    "departure": "2026-11-09 21:35",
+    "arrival": "2026-11-09 23:55",
+    "duration_min": 290,
+    "plane": "Airbus A321neo"
+   },
+   {
+    "from": "BAH",
+    "to": "CDG",
+    "flight_no": "GF19",
+    "departure": "2026-11-10 01:20",
+    "arrival": "2026-11-10 06:45",
+    "duration_min": 445,
+    "plane": "Airbus A321neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "EK"
+  ],
+  "price": "INR 32031",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "DXB",
+    "flight_no": "EK511",
+    "departure": "2026-11-09 10:35",
+    "arrival": "2026-11-09 13:00",
+    "duration_min": 235,
+    "plane": "Boeing 777"
+   },
+   {
+    "from": "DXB",
+    "to": "CDG",
+    "flight_no": "EK75",
+    "departure": "2026-11-09 14:50",
+    "arrival": "2026-11-09 19:30",
+    "duration_min": 460,
+    "plane": "Airbus A380"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "TK"
+  ],
+  "price": "INR 32341",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "IST",
+    "flight_no": "TK717",
+    "departure": "2026-11-09 06:55",
+    "arrival": "2026-11-09 11:30",
+    "duration_min": 425,
+    "plane": "Boeing 777"
+   },
+   {
+    "from": "IST",
+    "to": "CDG",
+    "flight_no": "TK1833",
+    "departure": "2026-11-09 14:30",
+    "arrival": "2026-11-09 16:15",
+    "duration_min": 225,
+    "plane": "Airbus A321neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "QR"
+  ],
+  "price": "INR 34061",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "DOH",
+    "flight_no": "QR579",
+    "departure": "2026-11-09 03:45",
+    "arrival": "2026-11-09 05:35",
+    "duration_min": 260,
+    "plane": "Airbus A350"
+   },
+   {
+    "from": "DOH",
+    "to": "CDG",
+    "flight_no": "QR39",
+    "departure": "2026-11-09 08:25",
+    "arrival": "2026-11-09 13:15",
+    "duration_min": 410,
+    "plane": "Airbus A380"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "EK"
+  ],
+  "price": "INR 39197",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "DXB",
+    "flight_no": "EK513",
+    "departure": "2026-11-09 04:10",
+    "arrival": "2026-11-09 06:35",
+    "duration_min": 235,
+    "plane": "Airbus A380"
+   },
+   {
+    "from": "DXB",
+    "to": "CDG",
+    "flight_no": "EK73",
+    "departure": "2026-11-09 07:50",
+    "arrival": "2026-11-09 12:25",
+    "duration_min": 455,
+    "plane": "Airbus A380"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "LH"
+  ],
+  "price": "INR 39928",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "FRA",
+    "flight_no": "LH761",
+    "departure": "2026-11-09 03:35",
+    "arrival": "2026-11-09 07:55",
+    "duration_min": 530,
+    "plane": "Boeing 787"
+   },
+   {
+    "from": "FRA",
+    "to": "CDG",
+    "flight_no": "LH1044",
+    "departure": "2026-11-09 09:05",
+    "arrival": "2026-11-09 10:20",
+    "duration_min": 75,
+    "plane": "Airbus A320"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "AI"
+  ],
+  "price": "INR 45047",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "CDG",
+    "flight_no": "AI143",
+    "departure": "2026-11-09 12:40",
+    "arrival": "2026-11-09 19:05",
+    "duration_min": 655,
+    "plane": "Boeing 777"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "AF"
+  ],
+  "price": "INR 49268",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "DEL",
+    "to": "CDG",
+    "flight_no": "AF215",
+    "departure": "2026-11-09 05:10",
+    "arrival": "2026-11-09 10:20",
+    "duration_min": 580,
+    "plane": "Boeing 777"
+   }
+  ],
+  "source": "gf_search"
+ }
+]

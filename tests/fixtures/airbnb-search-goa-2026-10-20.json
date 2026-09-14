@@ -1,0 +1,64 @@
+{
+  "_note": "Simulated answer in the shape @openbnb/mcp-server-airbnb 0.3.0 returns (search tool, fields kept by its allowSearchResultSchema). Real searches are blocked by Airbnb's robots.txt unless explicitly allowed.",
+  "searchUrl": "https://www.airbnb.com/s/Goa--India/homes?ne_lat=16.0627210&ne_lng=74.5012421&sw_lat=14.4909736&sw_lng=73.5104730&checkin=2026-10-20&checkout=2026-10-25&adults=2&children=0&infants=0&pets=0",
+  "searchResults": [
+    {
+      "id": "12345678",
+      "url": "https://www.airbnb.com/rooms/12345678",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTIzNDU2Nzg=",
+        "description": { "name": { "localizedStringWithTranslationPreference": "Sea-view studio near Candolim Beach" } },
+        "location": { "coordinate": { "latitude": 15.5186, "longitude": 73.7625 } }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapCategoryInfo": { "body": "Apartment in Candolim" },
+        "primaryLine": { "body": "1 bedroom, 2 beds" },
+        "secondaryLine": { "body": "20–25 Oct" }
+      },
+      "avgRatingA11yLabel": "4.92 out of 5 average rating, 118 reviews",
+      "listingParamOverrides": { "categoryTag": "Tag:8678", "photoId": "1500000001" },
+      "structuredDisplayPrice": {
+        "primaryLine": { "accessibilityLabel": "₹18,450 for 5 nights" },
+        "secondaryLine": { "accessibilityLabel": "Show price breakdown" },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": { "items": [{ "description": "5 nights x ₹3,690", "priceString": "₹18,450" }] }
+        }
+      }
+    },
+    {
+      "id": "23456789",
+      "url": "https://www.airbnb.com/rooms/23456789",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MjM0NTY3ODk=",
+        "description": { "name": { "localizedStringWithTranslationPreference": "Palm-shaded cottage in Assagao" } },
+        "location": { "coordinate": { "latitude": 15.5961, "longitude": 73.7683 } }
+      },
+      "structuredContent": {
+        "mapCategoryInfo": { "body": "Cottage in Assagao" },
+        "primaryLine": { "body": "2 bedrooms" },
+        "secondaryLine": { "body": "20–25 Oct" }
+      },
+      "structuredDisplayPrice": {
+        "primaryLine": { "accessibilityLabel": "₹27,500 for 5 nights" },
+        "secondaryLine": { "accessibilityLabel": "Show price breakdown" }
+      }
+    },
+    {
+      "id": "34567890",
+      "url": "https://www.airbnb.com/rooms/34567890",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MzQ1Njc4OTA=",
+        "description": { "name": { "localizedStringWithTranslationPreference": "Villa with pool in Anjuna" } },
+        "location": { "coordinate": { "latitude": 15.5733, "longitude": 73.7406 } }
+      },
+      "structuredContent": {
+        "mapCategoryInfo": { "body": "Villa in Anjuna" },
+        "primaryLine": { "body": "4 bedrooms" }
+      },
+      "avgRatingA11yLabel": "4.8 out of 5 average rating, 36 reviews"
+    }
+  ],
+  "paginationInfo": { "pageCursors": ["eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjowfQ=="] }
+}

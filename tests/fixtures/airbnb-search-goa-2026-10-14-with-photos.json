@@ -1,0 +1,660 @@
+{
+  "searchUrl": "https://www.airbnb.com/s/Goa--India/homes?checkin=2026-10-14&checkout=2026-10-19&adults=2",
+  "searchResults": [
+    {
+      "id": "28402869",
+      "url": "https://www.airbnb.com/rooms/28402869",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6Mjg0MDI4Njk=",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "1 BHK Apartment Calangute-Baga-Anjuna Rd. Goa (GF)"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.5754,
+            "longitude": 73.7617
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 1 double bed, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.75 out of 5 average rating,  208 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹8,989 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹1,831.47: ₹9,157.35, Long stay discount: -₹169.30, Price after discount: ₹8,988.05"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/dcade7be-e598-4fd3-982c-6d4ad44dc327.jpg, https://a0.muscache.com/im/pictures/43249372-c89c-4331-ab31-e81e16256b3b.jpg, https://a0.muscache.com/im/pictures/874ca922-0754-4b39-b33f-72adfb0e632a.jpg, https://a0.muscache.com/im/pictures/c3ddcfa9-db4f-4cd2-8cee-e158f68f62f2.jpg, https://a0.muscache.com/im/pictures/78ebb7e4-986a-4eb1-ae7d-ee741c8c9981.jpg, https://a0.muscache.com/im/pictures/4ec50456-cab2-4521-a776-036dae1d0d21.jpg, https://a0.muscache.com/im/pictures/000f51a6-a961-457d-ae02-516f63c8269a.jpg, https://a0.muscache.com/im/pictures/53015e72-53ac-485e-a695-4733ab76dbd5.jpg, https://a0.muscache.com/im/pictures/7bae9b5b-1d1a-47bf-b4e4-5002c717ba81.jpg, https://a0.muscache.com/im/pictures/fd5879d4-b6a1-409a-997a-0b904441136f.jpg, https://a0.muscache.com/im/pictures/567e4af3-4c24-4252-9e10-c17d294a6a1e.jpg, https://a0.muscache.com/im/pictures/8a8217c2-d3d3-4cf9-8026-ff709ea9e450.jpg, https://a0.muscache.com/im/pictures/e2427be5-da88-48a8-b365-c326ecdf7bb7.jpg, https://a0.muscache.com/im/pictures/f73d42a2-743f-42b6-b2de-338aee0aa5b3.jpg, https://a0.muscache.com/im/pictures/1a5800c3-9260-4955-8768-295924b9a5a5.jpg, https://a0.muscache.com/im/pictures/41aba424-a13e-482a-a076-44ba6b192be3.jpg, https://a0.muscache.com/im/pictures/dff308a1-5d5d-446b-ad34-a0d96e67eea8.jpg, https://a0.muscache.com/im/pictures/miso/Hosting-28402869/original/f7a888e0-18b9-484c-b10b-80f81b105813.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mjg0MDI4Njk=/original/f917a559-63e8-4dd5-a44d-f8618ec70193.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mjg0MDI4Njk=/original/f2c5cfa4-9feb-4f68-9c48-3677fa290fec.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mjg0MDI4Njk=/original/44e452a3-1a1f-4ffc-a4b9-6c6451f9e19b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mjg0MDI4Njk=/original/2c5ce5bb-5374-4e81-ae14-6462a78dc201.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mjg0MDI4Njk=/original/beb86ac3-59fa-49ee-99d1-9df32541f555.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mjg0MDI4Njk=/original/f97d3343-8ff6-4ffc-81af-d5737bee581e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mjg0MDI4Njk=/original/3deb135f-ace4-47f0-8f58-245af46bafbe.jpeg"
+    },
+    {
+      "id": "1708013998145434937",
+      "url": "https://www.airbnb.com/rooms/1708013998145434937",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTcwODAxMzk5ODE0NTQzNDkzNw==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Windsong Studio | Nature Escape in Goa"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.52867,
+            "longitude": 73.79996
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 double bed, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "5.0 out of 5 average rating,  10 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹16,977 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹3,395.40: ₹16,977.00"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/61d817a0-ed90-4f50-b88b-da8aa965323e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/7adfa26e-7015-4c09-8091-2fff71cdb219.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/a87ff34b-2015-4072-92a1-72abd84f76db.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/0ab85301-58a4-4970-98b6-a98d8ec2b344.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/3c610afa-df9d-41c2-a75c-505605589901.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/0b3ccb4c-2cf8-47cc-860b-82314de0adec.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/936b7b30-82c9-4aac-9fb0-860fe260a412.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/ed29d821-77d4-491d-b7d5-19e12b5d1230.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/c1b08e5c-078f-4a31-9fb1-67af5cd90159.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/9533d051-d715-4847-91f2-d09e0a252f6b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/71f82f03-ba95-47fa-86e7-bea764548765.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/63ab33ad-abc4-408e-ba95-693e14881227.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/58ee48d9-0433-406e-b281-257c6b523650.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/65b92f07-d628-4f02-9553-0a93420251fc.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/13c7faed-7b48-4a96-93ed-4dab6ea5faf1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/ad5f5919-9e30-4cf1-aa95-40168a33dfc0.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1708013998145434937/original/434d2d7c-65e8-41db-9cad-14faaadb3369.jpeg"
+    },
+    {
+      "id": "1742032269840425711",
+      "url": "https://www.airbnb.com/rooms/1742032269840425711",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTc0MjAzMjI2OTg0MDQyNTcxMQ==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Cabana - 1bhk, 2 mins walk from beach"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.2824,
+            "longitude": 73.9164
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 1 bed, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "5.0 out of 5 average rating,  9 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹22,500 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹4,500.00: ₹22,500.00"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/dba49c3c-402d-40d5-ae4d-de3d8d9c0951.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/6d862889-638a-4517-83f7-1f6ed2cbd71d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/e97e1b1a-4142-42bb-8cb8-f8a0d6365949.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/89c9f6fe-dead-4c7e-beb3-0a8ddae07b57.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/695f41d4-5c7e-49e8-b025-c09f857b72ee.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/f7922f83-990e-4db5-bae1-071102a0e226.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/468c5dc6-ca7d-4bd4-b01c-5bd3ca35e34b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/7cf6aa40-2057-47dd-a6ee-69fb744fe2cc.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/349fa183-d2b9-4d52-94b2-dd2b313c7430.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/2b058701-2fd8-4421-8b7f-953e9254af35.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/c1f859f2-e4f1-4e2e-a56c-6d4691894d3a.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/27424e14-fc84-4e75-95c4-d2336e317b9c.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/b2f7ae05-85d6-4ea9-97cd-feb478730908.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/ffa8b82a-9083-48f4-97d0-812fb081aa52.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/02675fe8-c437-436f-bd47-6240380937fd.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/fbe62f79-63e4-4484-a0c8-2a9ac2c2b33e.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/69480873-8c0d-4856-9a8f-45dc106c1d66.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/fefeef14-779a-41d9-af23-2d7dadd779af.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/21ee8844-6611-4189-8738-72cb006e5ed7.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/14c4d54c-56b5-4233-9ee5-89df4badb7d0.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/27cdcf51-9d72-42ee-8c0f-cdb6d96d5baa.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/b2950a3d-26b2-413f-aba0-61b591658516.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/30c6ab13-4add-4908-94b2-e267a432a58c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/dec35a51-1d8c-4f51-8ede-0ab5ae50d08e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/1289e40d-3f01-4e23-a664-48270a60a5c9.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/aebe2e5e-d4e4-4f70-acfd-abca09c6883c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/5dd554fe-7fff-44f3-8367-3b5906dc6c2b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/3543912b-62ae-497b-9883-ddcb4dd7b05e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1742032269840425711/original/2ed07504-9e65-4bd8-bdcd-f3d07faf6939.jpeg"
+    },
+    {
+      "id": "770851514051582727",
+      "url": "https://www.airbnb.com/rooms/770851514051582727",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6NzcwODUxNTE0MDUxNTgyNzI3",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "BRIKitt Leisure Home Duplex Apartment in Dabolim"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.39488,
+            "longitude": 73.86743
+          }
+        }
+      },
+      "badges": "Superhost",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 2 beds, 1.5 bathrooms",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.82 out of 5 average rating,  91 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹12,005 for 5 nights, originally ₹13,338"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹2,667.60: ₹13,338.00, Long stay discount: -₹1,333.80, Price after discount: ₹12,004.20"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/ee95a81c-48a4-4d94-9599-00efd7aae7e9.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/e6b67aa7-b02d-451d-83a4-dbd60d471177.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/bed970d1-75f1-4ea7-ae8a-462fcbc379e2.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/4568825a-2464-414d-b40f-857e3630f4bf.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/f17d374d-8c20-46ea-af0d-9035aa79c727.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/175aea69-75a7-4b32-af9e-31879574565d.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/498a80cd-717f-4488-a46d-3deea7f99ff6.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/902d0db9-56d1-470d-8c96-08d1b6cbe9d1.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/970517aa-d5dc-45f0-a129-b9e982b63d16.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/e4c894eb-ab2a-4393-b87c-3cc5af0812b8.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/854e0912-6c39-49f1-8410-b93f2d1daa1f.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/2c6a86c4-1d88-475e-8a56-2c4105b056d4.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/4784207c-d5dc-450e-bf54-93b6b2e558a1.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/28123179-ba2e-4a76-8b3c-4e4ea9828988.jpeg, https://a0.muscache.com/im/pictures/prohost-api/Hosting-770851514051582727/original/e1df00fb-c593-4df9-9bb6-84b4d8084acc.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzcwODUxNTE0MDUxNTgyNzI3/original/42a55b1f-d0a9-458a-a27c-05496ede790c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzcwODUxNTE0MDUxNTgyNzI3/original/21ce16f4-22a7-4b53-b923-627f4ca55b91.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzcwODUxNTE0MDUxNTgyNzI3/original/4e52db64-0509-435d-8242-0ba19e25165b.jpeg"
+    },
+    {
+      "id": "701944223706240100",
+      "url": "https://www.airbnb.com/rooms/701944223706240100",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6NzAxOTQ0MjIzNzA2MjQwMTAw",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Eze by Earthen Window | Penthouse | Pvt Terrace"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.61481,
+            "longitude": 73.80409
+          }
+        }
+      },
+      "badges": "Superhost",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 2 beds, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.92 out of 5 average rating,  173 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹30,587 for 5 nights, originally ₹39,856"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹6,117.40: ₹30,587.00, "
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/e11f6514-22c1-4458-933c-811367feceb6.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-701944223706240100/original/0433e511-a5f0-4809-a105-51f34b1d796e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/9f0a4736-c1fc-4360-8a10-e37d6db33b79.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/b22e30eb-8c09-497d-9dc0-96a716f62e42.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/5362d968-c0b9-49af-8f54-41820fb53efa.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/178f094e-3ada-4173-9fa3-b7386cc3a575.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/06b031d6-3b27-4796-8730-c787eef0a0f1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/ad822e46-b565-454d-8d22-4a117556d604.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/c2f4c8c2-3e30-4e81-9b49-b8b1b1a8aa47.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-701944223706240100/original/85785869-4987-444e-9a27-25428ffa2115.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-701944223706240100/original/e6acd150-b8cc-48fa-959c-e02e6c1ab156.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/792eaf5d-03d7-4670-b7a8-cea749d153f7.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/e90710de-54ae-4347-9940-3aaf69f04d5e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/63006fcb-e0c1-4cce-805e-93b75fe77556.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/34df7895-dc4a-41cd-a72d-c49f6b208a74.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-701944223706240100/original/e13abb39-a4cd-441c-916a-d344b17d4501.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/c6f369ca-d063-4c9d-b670-c9230341a2af.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-701944223706240100/original/e7abd2bf-4765-44b5-9f9d-979c3a7c78a3.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/2e3d2630-312a-4abe-b1d9-1f2a912fe542.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/2214f836-deec-4e9d-bd13-1869550a87b1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/7f04285c-f499-4f49-ba82-150b72c25af5.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/f6575507-df9a-49dd-82bc-11aa3e8662a8.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/9077786f-bead-4161-b6fe-33452958fd4c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/0e821d1a-5167-4637-8454-1d9e989f7af8.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/a77f13cf-b011-49a9-b579-eebbcadedea9.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/dca07b88-3a4b-40f3-ba50-91157b4af906.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/fa74a9a3-5f81-4199-b60d-14eaecd61a84.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/211043b2-1046-4d04-8a0c-7e96a7b5ad42.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-701944223706240100/original/80a5311f-c0bd-4f41-b01c-826cbb914d69.jpeg"
+    },
+    {
+      "id": "657011800148868945",
+      "url": "https://www.airbnb.com/rooms/657011800148868945",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6NjU3MDExODAwMTQ4ODY4OTQ1",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Quinta Da Santana Luxury Villa : In-house kitchen"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.32822,
+            "longitude": 73.97523
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 1 bed, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.89 out of 5 average rating,  176 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹27,540 for 5 nights, originally ₹31,560"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹5,508.00: ₹27,540.00, "
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/d98481cd-55d7-430b-96f5-08d673ec8d92.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/7ccda8ef-bf5f-41d5-81fb-5fe30624c38b.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/a1083c29-58e1-4acf-b79d-14da9dad3d26.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/f06d87d2-f20a-4e27-a6c7-85ddc2201ffe.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/ced9507a-d2da-4ca3-a535-f48bdb35046b.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/f15e9c76-6e9c-413b-8d66-fa8464b2ff97.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/af90e7df-a310-47c8-ae0d-ac299c9ae547.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/f2da4c6a-4f3d-4ad1-ab86-8170d30d962b.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/531795af-d07f-438c-b217-5a900e07b5a2.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/c3fe6339-fbd0-4b83-bff5-28f429252a9c.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-657011800148868945/original/f86f9f0a-1907-4c28-bfff-ea4c5f25095e.jpeg, https://a0.muscache.com/im/pictures/1e36056e-2f67-4ad9-aa39-0547b2cfaeff.jpg, https://a0.muscache.com/im/pictures/0933117a-7ef4-40a1-80b4-229a99ff9769.jpg, https://a0.muscache.com/im/pictures/f554f278-439e-406c-91c3-f928d050dfa9.jpg, https://a0.muscache.com/im/pictures/0eac3536-c5da-4fca-800a-0186a7ea0d03.jpg, https://a0.muscache.com/im/pictures/a81f43e3-1b39-45a0-ba3a-acebcab929e0.jpg, https://a0.muscache.com/im/pictures/c1771c68-5f05-4a59-9449-76ea725b6ec0.jpg, https://a0.muscache.com/im/pictures/1b3fda4f-ee87-410b-a721-52d28da40b1e.jpg, https://a0.muscache.com/im/pictures/1fa808eb-322d-41c8-888d-25d206d0c856.jpg, https://a0.muscache.com/im/pictures/ffc1b0f1-1887-4587-bb61-ec65bfcb8ced.jpg, https://a0.muscache.com/im/pictures/fe4b0cc4-f092-417b-9f80-4cc5a97e1b69.jpg, https://a0.muscache.com/im/pictures/be4dc822-cb24-4cb8-9fce-6d86dc141b74.jpg, https://a0.muscache.com/im/pictures/5ab703dd-2a02-499c-af57-b527bdb6e356.jpg, https://a0.muscache.com/im/pictures/e90f61cd-64a9-45cd-8912-d9b7e897dbe1.jpg"
+    },
+    {
+      "id": "1755710897066422505",
+      "url": "https://www.airbnb.com/rooms/1755710897066422505",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTc1NTcxMDg5NzA2NjQyMjUwNQ==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Studio Apartment in Old Goa"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.4949,
+            "longitude": 73.9134
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 1 queen bed, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.9 out of 5 average rating,  10 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹9,550 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹1,910.00: ₹9,550.00"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/a04cdbaf-bf6b-452d-9698-ba2639960095.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/14559c70-4f7c-427b-a1a0-d75d2b38f06e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/6d63e2ea-6a87-4d21-bf4c-997e9a19beec.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/4a122088-7a63-453d-9f52-3f32861bb0ea.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/85722e9a-5419-4246-9682-9d4c72db7042.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/243d11e0-9029-4ca0-bde9-ea3b04643e3b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/5948ee43-f008-42fb-95b1-70f878c902ff.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/e6d6add6-b604-48b2-8a84-468f78a46b2a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/b9ea0b3d-7bf3-4e80-891c-1348bb9c97a6.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/4193187f-a793-4bdd-b715-8528e6de7c0e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/c2106cd9-6022-4bb9-8b75-10483a31c7f5.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/e91b796a-5f15-4312-bfe4-a56bf0efc28d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/c625dbb5-05ee-4cbb-8827-fa8e4723585e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/519757ca-c577-4119-9faf-484ef2570eeb.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/867e1d6b-a206-47e9-9a29-81a813bc6141.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/0a62f770-d72d-4fdc-a10c-c9fadfa73515.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/b3a24cf6-2bab-4c20-ad67-e72fe79c92ea.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/52d3e094-71dc-47e2-a361-3e8748032c55.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/a833d01c-d7f3-499c-913b-d946773624f5.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/c424baa2-5d7f-43c9-a964-7cfbf5937de8.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/7a7d8dc8-aa80-4bca-9da3-0bd5376de5c0.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/c4b0b0b8-f8e9-4e35-98c1-e3eb793bee7b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/745acd95-a806-4472-97d8-313592e82ae5.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/d9551c5c-dfc4-423c-89de-3b65e7d59b93.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/d9b88ad5-befb-4e1b-a2c7-c98fbf6ee527.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/c5bf134d-2282-46f7-af7f-ccc9b0dc71f1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1755710897066422505/original/5d58f7af-ce54-40ae-adc4-292c12231c03.jpeg"
+    },
+    {
+      "id": "1740735381790020152",
+      "url": "https://www.airbnb.com/rooms/1740735381790020152",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTc0MDczNTM4MTc5MDAyMDE1Mg==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Tiny Beach Home / Galgibaga / south Goa"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 14.9683,
+            "longitude": 74.0471
+          }
+        }
+      },
+      "badges": "",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 2 beds, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "New place to stay",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹17,922 for 5 nights, originally ₹21,648"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹4,329.41: ₹21,647.04, Special offer: -₹3,726.00, Price after discount: ₹17,921.04"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/8e0b74a8-1e8d-4041-9922-8368e3917cfc.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/add97fc5-572a-4fc0-991b-9f9a41e35794.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/76c780eb-7ca6-4be2-b052-0e29adb212ad.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/a64d1b75-11a7-4ed6-acd3-2bf0b8e341d8.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/239d2cd9-4ad6-4991-bfdd-33bcb2453eba.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/eb9f767e-f2f5-4f2f-b0ee-0412ea72c71d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/f4338d96-cc57-46e5-b85c-b77d350602b4.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/1bf8c16e-d1c3-4cab-90fa-2e2e465a8ec9.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/5e69e47b-9717-4fd2-a385-383a21c903d4.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/052f768e-1b31-4686-83a7-22a6efbec429.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/3be9dd24-0d45-4da1-a05a-f70edd4528f6.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/d6a1256e-6226-45f3-9f62-cd00b28fd6a8.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/2e55ba7c-5bbd-488c-88cf-9de86c8f2d28.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/92115a3f-8593-4e58-a09f-91c8799ccd85.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/ea93f976-842e-4077-9827-074a3ae72242.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/b0f1f356-5372-4b72-9e8a-09eb3f29089a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/990caf45-6588-45d1-a21d-262c59ecdfa3.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/53bf3413-0ef6-489a-af7e-e2746a5ee587.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/a10b2f77-08fe-4def-83e9-6b896c254b8a.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/7e52418c-b012-47c9-a53d-56c45f318678.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/c1a03541-a1cb-4548-b051-0366f0e18460.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/f8b1a5f7-0dcb-40de-a657-af4d027fde58.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/4a941abc-6a80-420e-87ce-1e933a46e10e.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/d881dc46-b7cb-4622-95b0-1a0f2e5ea030.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/4d9b67ed-db41-4896-8bc4-db70f05dd046.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1740735381790020152/original/aad568fe-6ed8-480a-aae9-76a9ba5692ef.jpeg"
+    },
+    {
+      "id": "1286208323180296244",
+      "url": "https://www.airbnb.com/rooms/1286208323180296244",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Luxury Cottage:Nirja|Romantic Open-Air Bathtub|Goa"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.6726,
+            "longitude": 73.7177
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "2 bedrooms, 2 beds, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.91 out of 5 average rating,  203 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹35,340 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹7,068.00: ₹35,340.00"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/miso/Hosting-1286208323180296244/original/59132e17-641d-468c-88a6-289952403d08.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/fbb86b2e-b8e0-429e-9ea2-c58a5cdae447.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-1286208323180296244/original/d76e28d6-6a5a-4d9a-b62f-311c6b976127.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/79e808a7-5d6c-492f-9a89-54866b3d6a22.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/763339d5-727b-4eea-a260-e5f1cb8730f6.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-1286208323180296244/original/abb7ccb2-89ac-4fa9-b6d6-d66a2bf8ada1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/c4ddb030-ea86-463c-8491-cd2c1d5446cb.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/3922bd6c-7d1c-4cd4-ab62-a7a67771fe17.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/67a76fda-a4cc-4bc0-8d99-58dd9679b6fa.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1286208323180296244/original/fb38e0f3-4b3b-4d99-81ae-cf981d6b9cfa.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/fffaa8a5-1017-4308-8822-f3c24cc25923.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1286208323180296244/original/34df4f33-6d93-470c-b5d9-6acce10d03b2.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-1286208323180296244/original/e367cb8d-f18d-4869-b454-e4219d2006aa.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/909337b4-52d6-4a80-a4bf-bf4fca5ed52b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA%3D%3D/original/5b818080-8a68-4dcf-9cf4-fb538242b9e1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1286208323180296244/original/8c9ef716-90b7-4cfd-b0d5-a9eba7a65e63.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-1286208323180296244/original/f65a60fb-8865-4901-8cdb-70820b1e4da7.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/0b980305-e55c-4d11-9e47-a32f8cf6682e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/55033462-117d-45f4-8710-49679379231a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/90ee3c23-d53a-4a2e-a5dd-968df855a774.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-1286208323180296244/original/4b06638d-99f2-4de8-8230-ed66b90c705c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/55b1f86b-b133-4763-91ce-f45115f7b48f.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/fb005867-9a14-4d70-a9df-18c4fa0f2442.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA%3D%3D/original/d1738973-2bf1-44b3-ade4-031ede3b1c91.png, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/60a4e920-c95c-4dde-ba4a-49639c5fc775.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1286208323180296244/original/7795d909-4634-4774-9dcb-94f86ab81330.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/55ffe848-1b53-47bd-9662-2206eb5b0401.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/28399311-dd5e-4359-98b3-02ab5a408be5.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI4NjIwODMyMzE4MDI5NjI0NA==/original/fd57e764-1734-4cdd-a22a-ef5e8f8e4ce8.jpeg"
+    },
+    {
+      "id": "1750708897107423405",
+      "url": "https://www.airbnb.com/rooms/1750708897107423405",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTc1MDcwODg5NzEwNzQyMzQwNQ==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Casa Sereno 1 bedroom, 1 bathroom apartment at Varca"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.2263,
+            "longitude": 73.9343
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 1 queen bed, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "5.0 out of 5 average rating,  6 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹15,000 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹3,000.00: ₹15,000.00"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/94931cd8-5908-4067-8046-e0f16a07f75b.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/311dad16-b943-47f8-8a52-b5f2dc0a4550.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/42dc78ef-c334-4750-8b35-fb406bff2902.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/0a341b7a-74f5-4c09-9d81-29decf8e0ed2.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/3daa9521-b854-47b5-9a33-3881bce3d488.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/4aeee337-12b8-4639-88c3-98b93572749b.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/57fddd19-ed4a-4b62-ac0a-1dd0d64dbf80.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/7fd92ec7-e170-4443-baf6-0c2a8abe0da0.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/964618ad-28f9-4609-8557-15fde9833360.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/8a3e03ed-0595-4ffe-b691-641a120fe3a2.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/c1b7008f-7f8f-45e5-8077-818addfcfdad.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/9250b12d-32ff-4394-b26d-686441c1ce79.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/859f2946-a0c8-48ce-8fcb-fb32d478835f.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750685181141151348/original/a3658e17-f044-4497-948a-f5ae7dd0e0b8.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1750708897107423405/original/7d63cf59-669b-4a85-bd13-2b19382e2b13.png"
+    },
+    {
+      "id": "21372133",
+      "url": "https://www.airbnb.com/rooms/21372133",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MjEzNzIxMzM=",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Beautiful Estellina Homestay B&B, Caranzalem Beach"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.46526,
+            "longitude": 73.80717
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "2 beds, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.9 out of 5 average rating,  257 reviews",
+      "listingParamOverrides": {
+        "photoId": "473124078",
+        "relaxedAmenityIds": "",
+        "splitStaysLocationPrecisions": "",
+        "splitStaysLocationsAcpIds": ""
+      },
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹14,463 for 5 nights, originally ₹16,986"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹2,892.60: ₹14,463.00, "
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/18f7a516-3dd5-4ed1-935c-9c886c1d1413.jpg, https://a0.muscache.com/im/pictures/27c84dc2-9d03-4837-bcdf-fa0125fc2393.jpg, https://a0.muscache.com/im/pictures/d9f8a4b3-7072-4977-97be-b254ca14a6b0.jpg, https://a0.muscache.com/im/pictures/airflow/Hosting-21372133/original/c33e383c-2ec5-464a-bdb9-4964ef26553b.jpg, https://a0.muscache.com/im/pictures/014aab8c-0262-41d5-9834-e08e574df67e.jpg, https://a0.muscache.com/im/pictures/airflow/Hosting-21372133/original/81891e12-f870-4e0a-92a5-ba1ede984d9e.jpg"
+    },
+    {
+      "id": "1590437768718616440",
+      "url": "https://www.airbnb.com/rooms/1590437768718616440",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTU5MDQzNzc2ODcxODYxNjQ0MA==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Goa’s most stylist villa for couple I Pool I BBQ"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.2008,
+            "longitude": 74.0168
+          }
+        }
+      },
+      "badges": "Superhost",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 2 beds, 1.5 bathrooms",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.83 out of 5 average rating,  18 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹40,500 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹8,100.00: ₹40,500.00"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/73da3d91-3e73-4f86-a227-bf8ea4d6fd2f.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/80bedc89-ca6a-4d85-8b71-af5f1260b54d.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/479f253d-e762-4528-81a5-e1f92301602c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/0ba9264c-2506-4f4a-b80e-9436537ea7ed.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/f7c35c15-9352-49b6-9a3c-c4120c113c57.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/2c002fed-8574-4c1c-9471-3fd594e5c10e.png, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/dbf38259-4327-4e48-8ef7-3e4225b3affb.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/52dabad8-2059-4d90-9451-490cb5a09684.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/431284d5-9526-422e-b51d-295053a4c82b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/06057d9a-78c7-4b9f-b1b5-bd5e6c1de3c4.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/a9d34e32-f925-44ad-aca8-6e701f9c8d98.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/c85f666f-a532-460b-8b3b-4902325d8458.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/d5b669e1-ccc0-4315-b51f-f7931ea8809e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/cdd4c354-fc30-494c-b423-802529a106ed.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/c234404e-eb48-46ef-91d4-b67ae8e15f84.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/62c9bab6-0db0-45a1-865a-30aa086a717b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/8d7244f6-486e-4ef9-960d-a99af951aa22.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/5f9c0b01-394e-4e80-bbe5-5c7f4536156f.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1590437768718616440/original/4687032e-52de-41b5-9132-022b2f760d04.jpeg"
+    },
+    {
+      "id": "881567570198660579",
+      "url": "https://www.airbnb.com/rooms/881567570198660579",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6ODgxNTY3NTcwMTk4NjYwNTc5",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Cozy Villa by the pool"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.1716,
+            "longitude": 73.9446
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 2 beds, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.92 out of 5 average rating,  63 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹22,510 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹4,501.94: ₹22,509.72"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/02cd9405-6827-4a10-98cc-6b7f579d1c0c.jpg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/dbf945fc-7524-483d-98ed-1b7bf0790880.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/1f7b0941-a422-42b9-bee9-8307a66e2ae6.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/178ddc4a-2ddd-43f4-b659-79062090660b.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/0665b0ff-3c3a-4901-acc0-afef557d8de1.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/dc851593-0c8a-4f9c-a309-4424b81d1705.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/152bd779-7c81-44a2-ae05-3f5f31327c3b.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/5b70ef70-12d4-4cc5-850a-23942c0c3884.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/721ac9ab-6d05-453f-8416-609d84464ae6.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/bde1e64e-e52c-40d5-9363-605c3d770476.jpeg, https://a0.muscache.com/im/pictures/215589d0-9a1f-4c41-a1cc-f1fe37531483.jpg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/4e3427f5-82f4-441c-8c24-88e315179543.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/4491f196-6383-4a3c-8968-cfbdf05519fe.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/bc556afe-3e26-4672-bcf7-d932bc4782bb.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/1a31fdc2-bddd-4fe5-9148-985fbeb6bd69.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/c05b8308-4dd2-48fc-a73e-c74034932303.png, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/e9cf64d3-7b47-421e-8ec0-167fb244f1ed.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/3fb86d68-3a35-4229-bbdd-cd6c45662a2a.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-881567570198660579/original/6c9267dd-d3e2-400d-884a-66bee026f264.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-881567570198660579/original/163ea15f-9cc2-487c-8b21-5a2370792180.jpeg"
+    },
+    {
+      "id": "1101436298804121117",
+      "url": "https://www.airbnb.com/rooms/1101436298804121117",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTEwMTQzNjI5ODgwNDEyMTExNw==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Vanah View - 1BHK Cosy Abode"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.0435,
+            "longitude": 73.99379
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 2 bathrooms",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.9 out of 5 average rating,  59 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹20,824 for 5 nights, originally ₹22,981"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹4,164.80: ₹20,824.00, "
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/d9851f4e-be9e-49db-9211-f04579e5e7aa.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/e887d7e6-037b-4286-815d-1758e862850a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/e39bf4df-8e23-4aa5-9c27-41a365fc308a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/d729fba7-b5af-467a-a34c-3d33cfead067.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/eb93b93f-6e70-450d-841f-75142a22ff9e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/a96f264a-24f4-4e13-9830-ac625ab62c5c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/b89855c9-6682-401d-a351-b5e5734dbc76.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/d7badc9c-861e-47f2-962f-25ba1231db8d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/2b5801ff-d40f-44a7-b9e6-aef23423bcd7.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/ae5b21c1-43c2-448a-b57c-fafbbbe4011e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/6c5ed20d-6320-4598-8ca3-912303215fa2.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/dd771016-45f5-4c2f-8ddc-97c0cb731989.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/444a4702-064d-4b53-8ee1-250648fec3b7.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/74c74b92-cf02-4300-a2bb-6ae41a22a0ee.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/1bcad8c8-1f25-4ce0-91eb-4899739b08db.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/f321220a-fc2d-45ff-b548-7af44e110001.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/bbbff7f6-44d5-4868-aa5d-da94af31d0bd.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/59a00f34-e6be-41f9-8b44-4d7ce01afa62.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/a1ce9463-49b7-4c64-867b-93ec4c677124.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/52289580-eb65-4861-a766-4b8c157e2dfa.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/280f228a-56bd-401b-b92d-4b27854ccb9f.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/00e7e52d-ed31-43a7-977f-94659d87d836.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/2604ab77-6eba-4abb-bff9-11300441fec6.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/de88a317-3581-4322-b3ae-72f768733490.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/5cb337cd-b49c-4e02-b840-28ca2faffc7b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/f1a7e1d4-89c7-419b-bce6-bc6afefa38e9.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/d9f13b22-74c5-4cd2-895d-4cd9647e326c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/3ddeed26-c395-4c7b-bc08-be1bc882c787.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1101436298804121117/original/bc5531c5-e1ea-4b6e-b35f-bdc4660cc92d.jpeg"
+    },
+    {
+      "id": "1612984398124123217",
+      "url": "https://www.airbnb.com/rooms/1612984398124123217",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTYxMjk4NDM5ODEyNDEyMzIxNw==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Stunning 3BR beach touching villa w/ pool, Khavane"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.91956734530524,
+            "longitude": 73.56700092166861
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "3 bedrooms, 3 beds, 3 bathrooms",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "5.0 out of 5 average rating,  16 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹1,02,385 for 5 nights, originally ₹1,40,253"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹28,050.60: ₹1,40,253.00, Long stay discount: -₹37,868.31, Price after discount: ₹1,02,384.69"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/318014d9-a09b-49fe-bef3-adec80c6a9d4.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/b181e617-4b7f-4ae8-83e2-429d5d85d112.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/5751c690-aa68-4fa2-8d58-c650ea53d9da.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/cbbf7193-f5d1-43f0-af00-0a9527779f1d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/75bf7a84-5ba0-4b5b-96d6-52fafcf572da.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/ca4d2ddd-ba60-42a4-a879-1d6a3c68c482.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/f4a81047-1ab3-4d53-8bd5-30207747883a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/07467174-4413-4b30-8583-164b06c24b71.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/87eea43e-f1a9-4daf-8889-224b83fd9bc1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/76a95a03-54ad-4d24-a037-201e29b308ee.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/5f74ddea-0fa1-4647-a8fd-e31e0fcc0dbd.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/97b4c1ab-c855-44f6-ac16-eebb872d8b7f.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/0aabab65-57b3-4ce9-a4d4-2fcec540541a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/f9fd7ff2-473d-4395-8ec2-60968f0b11ac.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/7c03449d-2557-4ec6-bad1-67c11e09fe49.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/b78c4d7c-e0b2-4358-95e7-a4901186ed1a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/e17b4282-422f-41ff-ad9b-a6bb8b35d13f.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/5f6fdacf-94c2-44db-ad03-b3446383c57b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/1daf8e3a-db46-4dd9-9141-b98400cf4a7e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/dfc2b319-6149-473b-87d4-02399181f38d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/183b9e7b-bc20-42bb-aed3-408a9907ca77.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/c21fcd60-8686-43be-bdef-5269be455b70.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/8f628e36-7f9b-483b-9af4-8f216d025a9b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/a87d0aa0-39ec-421e-8f2b-6515b32bf888.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/c94a4fe0-c789-4bfc-8076-c9c05d2c641e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1612984398124123217/original/42c65d47-5a9e-4b7b-9154-bb34351890d6.jpeg"
+    },
+    {
+      "id": "714926546353928303",
+      "url": "https://www.airbnb.com/rooms/714926546353928303",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6NzE0OTI2NTQ2MzUzOTI4MzAz",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Casa Bonita - 1BHK Cozy Home w/Pool & Sunset View"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.6029,
+            "longitude": 73.7616
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 2 beds, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.93 out of 5 average rating,  161 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹20,578 for 5 nights, originally ₹25,036"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹5,007.14: ₹25,035.70, Special offer: -₹4,458.00, Price after discount: ₹20,577.70"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/79e3a042-fd5b-45b1-9863-2114dd9b5702.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/5e301426-aa6a-41bd-948a-b856f0a196cd.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/46a7cb92-dc3b-402f-ba77-824a080aef0c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/509d8120-0154-4fc3-8a79-95d14dae8c8a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/da3cc987-4027-483f-a251-debe6dff3b3d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/f8f85978-0bdb-49b0-89da-1bbca9abccf6.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/4f0ff346-3296-45bb-b0c1-08ad14b4a962.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/c5ac6d7e-f42f-4720-994a-c75e3d84f55f.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/9dd24b62-4ebe-474b-8ca6-d890a82caa97.jpeg, https://a0.muscache.com/im/pictures/a7aadfed-1661-477c-9c6a-64b5c5147d68.jpg, https://a0.muscache.com/im/pictures/f8610e07-724b-463a-b0b0-1a6e0657b33b.jpg, https://a0.muscache.com/im/pictures/3ec77816-9a05-4a37-9248-4c1c8e16c1a7.jpg, https://a0.muscache.com/im/pictures/a49c0afb-2736-4d34-b376-ff6d7d616985.jpg, https://a0.muscache.com/im/pictures/69f02d02-f306-4823-8d9f-4c868a85b705.jpg, https://a0.muscache.com/im/pictures/cd235a10-ec13-4959-9486-ae89088749df.jpg, https://a0.muscache.com/im/pictures/83f49b93-ac1a-4dc7-b263-d298e8f23e92.jpg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/461b9271-a156-461d-8cb7-932b55414144.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/c5b9a5c0-28fe-482f-baf2-0d99490c29b4.jpeg, https://a0.muscache.com/im/pictures/miso/Hosting-714926546353928303/original/470f50af-115a-4158-8bb0-2c85bb0847b6.jpeg, https://a0.muscache.com/im/pictures/832ceb23-338b-46d5-8c3b-e3d214449e10.jpg, https://a0.muscache.com/im/pictures/8ff3936c-332e-4c5f-9675-5eb055ab6223.jpg, https://a0.muscache.com/im/pictures/20ad85d7-dcff-4339-9fc2-e754aebb6ef9.jpg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/a92e705a-4c48-4e41-8deb-78d554ee8125.jpeg, https://a0.muscache.com/im/pictures/bbd4f12c-a9cb-4104-a904-17db869a73ef.jpg, https://a0.muscache.com/im/pictures/hosting/Hosting-714926546353928303/original/5666545e-a85d-4ebe-b8da-d5c3bca5d3ed.jpeg, https://a0.muscache.com/im/pictures/11ed443d-4bce-4818-859e-aa6358b65cd9.jpg, https://a0.muscache.com/im/pictures/76c20c17-6970-4520-9b45-8edf9085cebd.jpg, https://a0.muscache.com/im/pictures/d0ac3e21-7376-44e7-aea6-70c8faecf4c6.jpg, https://a0.muscache.com/im/pictures/aacb63fc-2a81-43d5-ab62-6848aa071092.jpg"
+    },
+    {
+      "id": "1607878606556871530",
+      "url": "https://www.airbnb.com/rooms/1607878606556871530",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTYwNzg3ODYwNjU1Njg3MTUzMA==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Susegad de Ora: 1BHK in North Goa | Pool | WiFi"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.6121,
+            "longitude": 73.8033
+          }
+        }
+      },
+      "badges": "Guest favourite",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 1 king bed, 1 bathroom",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.94 out of 5 average rating,  54 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹14,151 for 5 nights"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹2,830.12: ₹14,150.59"
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/6678e52f-d5cc-4cc1-92fd-97c9d73628d4.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/30085662-ee06-4ee2-bba0-6703d2bddabd.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/9063c637-f828-4da5-987c-f0f448220aea.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/3d4f8619-1692-4778-aea6-d781c930cf15.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/77ea15f8-71dc-49b4-9415-675257696d86.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/f968e96a-72eb-421e-9a38-986cb762cb0a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/bff2c5ba-3aba-4bb3-989a-c244115699d2.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/ab065dca-98f4-43f3-90f2-b43502eeab43.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/e10651e8-afb8-4b01-88d6-0a072d04e2e1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/c8b3738e-350b-430b-8270-c3b3dec1b8a6.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/356385d9-c79c-46c4-8110-21300c909498.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/cdfd5275-de66-43ed-872d-e871547f94be.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/efef524d-8a79-4293-a7f1-223d468993e7.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/e258e23f-837f-4f51-8eaf-17385e304f8a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/856ac7ae-9092-4444-adc5-530620536f7b.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/815cc647-3478-4114-bf11-9abb1d16b0d0.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/f8227685-3557-4dab-ad61-67bdf448597c.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/9b39080a-0285-43a0-aad4-eb4036616a91.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/9e1414c7-444c-43f3-88ea-104ff0086776.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/94c68f9a-5719-421d-8bc3-edf303c81b40.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/d6eb4dbd-b03f-415b-9896-157ed608ecd3.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/39dda7b1-1ca1-4869-b660-09f649e04d1d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/375b75f6-a83e-434a-94d3-07fc10a355d1.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/be664f14-9330-4491-94fc-b580368d92bd.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1607878606556871530/original/c80478d8-b140-4a7e-a35c-8e7d930d27ab.jpeg"
+    },
+    {
+      "id": "1666010519353273688",
+      "url": "https://www.airbnb.com/rooms/1666010519353273688",
+      "demandStayListing": {
+        "id": "RGVtYW5kU3RheUxpc3Rpbmc6MTY2NjAxMDUxOTM1MzI3MzY4OA==",
+        "description": {
+          "name": {
+            "localizedStringWithTranslationPreference": "Peaceful Gem |Private Jacuzzi|Sauna|Pool in Siolim"
+          }
+        },
+        "location": {
+          "coordinate": {
+            "latitude": 15.613116352247289,
+            "longitude": 73.80354954548588
+          }
+        }
+      },
+      "badges": "Superhost",
+      "structuredContent": {
+        "mapSecondaryLine": "",
+        "primaryLine": "1 bedroom, 3 beds, 2 bathrooms",
+        "secondaryLine": ""
+      },
+      "avgRatingA11yLabel": "4.9 out of 5 average rating,  20 reviews",
+      "structuredDisplayPrice": {
+        "primaryLine": {
+          "accessibilityLabel": "₹17,500 for 5 nights, originally ₹24,951"
+        },
+        "explanationData": {
+          "title": "Price details",
+          "priceDetails": "5 nights x ₹3,500.00: ₹17,500.00, "
+        }
+      },
+      "contextualPictures": "https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/c68fa96e-5083-4060-be89-f7f4ed5f4d19.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/fbc29791-6199-4b5a-80d7-c41cfa2caa72.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/3aa0d1e7-08dc-435f-a592-ec21fe04e167.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/4980fc83-8a0a-4d9a-9d30-34dd62a4c9cc.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/f0aaeb92-2915-4941-9ad8-c54333b3c60a.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/43f0db8a-480f-4169-8c5f-fa3b687858b5.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/e8389ab5-3910-4b67-8e37-73fa19020540.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/99edb734-f0d1-463c-bbc6-d75705bdc686.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/857940d8-2530-4497-b0b3-4c237ea3eddf.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/c4a213e2-28a4-427a-b14e-2d96bf7d6c73.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/1f7312af-19a3-4269-8c8a-926b92190331.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/7e906180-46d5-4536-8d24-6711fdda8aac.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/683b7c76-0d21-465c-bbfe-ac2f4f6241e2.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/308bd13f-3de1-492a-bfa5-ba9924577e07.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/7aaf4fa2-9a66-4c74-acfa-e7076ddb79d6.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/bcaceda0-ed5a-4b41-90bd-e2b0e085690d.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/7aeefd0f-65c7-4bea-b079-b24a7fb38ef8.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/05f787b7-09ff-4683-874a-6b8333555fba.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/6b13c19e-bcd5-4fb5-b4da-69687e791208.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/940adedd-b519-4028-aac9-d67d052f433e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/10dec717-e21c-4c3d-bd3a-03c9c7c340ed.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/ba2aacf0-1ae5-4ebd-be61-51d85bc75855.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/ef5d96c4-9581-4862-a1a9-6f5268cb18b7.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/a56a046d-3a60-4d48-9ca5-51b98b76186e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/d5fd07e2-dfc8-41bc-b34f-69a27b401357.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/f7f310af-5cb0-47bf-bb34-0d4ea9b693f9.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/c7319a6c-bb47-4e06-aae8-44bbf3a0638f.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/22b8fb96-a33e-4b80-b9b1-695e12a70e8e.jpeg, https://a0.muscache.com/im/pictures/hosting/Hosting-1666010519353273688/original/9cdc9c42-ec69-4093-99eb-3a128091db9b.jpeg"
+    }
+  ],
+  "paginationInfo": {
+    "pageCursors": [
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjowLCJ2ZXJzaW9uIjoxfQ==",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoxOCwidmVyc2lvbiI6MX0=",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjozNiwidmVyc2lvbiI6MX0=",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0Ijo1NCwidmVyc2lvbiI6MX0=",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0Ijo3MiwidmVyc2lvbiI6MX0=",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0Ijo5MCwidmVyc2lvbiI6MX0=",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoxMDgsInZlcnNpb24iOjF9",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoxMjYsInZlcnNpb24iOjF9",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoxNDQsInZlcnNpb24iOjF9",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoxNjIsInZlcnNpb24iOjF9",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoxODAsInZlcnNpb24iOjF9",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoxOTgsInZlcnNpb24iOjF9",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoyMTYsInZlcnNpb24iOjF9",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoyMzQsInZlcnNpb24iOjF9",
+      "eyJzZWN0aW9uX29mZnNldCI6MCwiaXRlbXNfb2Zmc2V0IjoyNTIsInZlcnNpb24iOjF9"
+    ]
+  }
+}

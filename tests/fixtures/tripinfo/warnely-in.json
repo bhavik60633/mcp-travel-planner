@@ -1,0 +1,109 @@
+{
+ "status": 200,
+ "body": {
+  "methodology": "https://www.warnely.com/guides/methodology",
+  "licence": "CC BY 4.0",
+  "attribution": "Warnely",
+  "country": {
+   "iso2": "IN",
+   "iso3": "IND",
+   "name": "India",
+   "region": "Asia",
+   "risk_score": 57,
+   "risk_tier": "High Risk",
+   "flag": "🇮🇳",
+   "summary": "Incredible diversity. Scams, traffic, and health risks are significant. Women should take extra precautions.",
+   "breakdown": {
+    "composite": 57,
+    "components": {
+     "editorial": {
+      "value": 52,
+      "weight": 0.5
+     },
+     "authority": {
+      "value": 70,
+      "weight": 0.3,
+      "sources": [
+       "FCDO",
+       "US State"
+      ],
+      "reason": "FCDO: Avoid all travel to parts; US State Level 2 (Exercise Increased Caution)"
+     },
+     "structural": {
+      "value": 61,
+      "weight": 0.15,
+      "sources": [
+       "GPI 2025",
+       "WGI 2024"
+      ],
+      "breakdown": {
+       "cc": 56,
+       "pv": 66,
+       "rl": 51,
+       "gpi": 70
+      }
+     },
+     "liveIncidents": {
+      "value": 20,
+      "weight": 0.05,
+      "count": 4,
+      "severeCount": 0,
+      "window": "30d"
+     }
+    },
+    "formula": "0.5×editorial + 0.3×authority + 0.15×structural + 0.05×live (renormalized when components missing)",
+    "computedAt": "2026-07-05T21:08:48.626Z"
+   },
+   "advisories": {
+    "fcdo": {
+     "alertStatus": [
+      "avoid_all_travel_to_parts_of_country"
+     ],
+     "summary": "FCDO travel advice for India. Includes safety and security, insurance, entry requirements and legal differences.  ",
+     "changeDescription": "Addition of  information about entry requirements for those entering from Ebola-affected regions ('Entry requirements' page). ",
+     "url": "https://www.gov.uk/foreign-travel-advice/india",
+     "updatedAt": "2026-06-04T11:11:12+00:00",
+     "lastChecked": "2026-06-20T14:02:30.356+00:00"
+    },
+    "usState": {
+     "level": 2,
+     "url": "https://travel.state.gov/en/international-travel/travel-advisories/india.html",
+     "updatedAt": "2025-06-16T00:00:00+00:00",
+     "lastChecked": "2026-05-26T14:30:31.562+00:00"
+    },
+    "liveScoreModifier": 70,
+    "modifierReason": "FCDO: Avoid all travel to parts; US State Level 2 (Exercise Increased Caution)",
+    "computedAt": "2026-07-05T21:08:48.626Z",
+    "recentChange": null
+   },
+   "drug_law": {
+    "tier": "severe",
+    "cannabis": "severe",
+    "note": "NDPS Act: small-quantity possession 6 months–1yr; intermediate 10yrs; commercial 10–20yrs. Bhang (cannabis preparation) tolerated culturally in some states (Holi etc.) but ganja/charas/hashish strictly illegal."
+   },
+   "lgbtq": {
+    "legal": "legal",
+    "social": "mixed",
+    "note": "Section 377 struck down 2018; same-sex marriage rejected by SC 2023. Mumbai/Delhi/Bangalore have scenes; trans (hijra) legally recognised. PDA varies sharply by region."
+   },
+   "womens_safety": {
+    "rating": "Exercise Significant Caution",
+    "text": "India has well-documented safety concerns for women. Harassment ranges from staring and verbal comments to groping on crowded transport. Solo women should dress conservatively (cover shoulders, knees, and cleavage), avoid traveling alone at night, use women-only train carriages where available, and share live location with someone trusted. South India, Goa, and Kerala are generally safer for women than North India. The situation has improved with increased awareness and women-focused safety apps like Himmat Plus."
+   },
+   "peace_index": {
+    "rank": 115,
+    "score": 2.229,
+    "year": 2025,
+    "source": "Institute for Economics & Peace, Global Peace Index 2025",
+    "url": "https://www.visionofhumanity.org/maps/"
+   },
+   "quick_facts": {
+    "p": "C/D/M",
+    "v": "230V/50Hz",
+    "tz": "UTC+5:30",
+    "d": "L",
+    "w": "u"
+   }
+  }
+ }
+}

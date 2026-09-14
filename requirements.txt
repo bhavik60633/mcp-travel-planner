@@ -5,3 +5,9 @@ openai
 mcp
 ddgs
 google-search-results
+
+# Flights (TP-01)
+httpx
+flights==0.10.0
+google-flights-search==0.1.21
+swoop-flights==0.7.0

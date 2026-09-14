@@ -1,0 +1,56 @@
+{
+ "status": 200,
+ "body": {
+  "type": "standard",
+  "title": "Paris",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Paris</span></span>",
+  "namespace": {
+   "id": 0,
+   "text": ""
+  },
+  "wikibase_item": "Q90",
+  "titles": {
+   "canonical": "Paris",
+   "normalized": "Paris",
+   "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Paris</span></span>"
+  },
+  "pageid": 22989,
+  "thumbnail": {
+   "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/330px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "width": 330,
+   "height": 206
+  },
+  "originalimage": {
+   "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/3840px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "width": 4592,
+   "height": 2870
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1374499237",
+  "tid": "f054f037-aea9-11f1-ae9d-386b2e146b86",
+  "timestamp": "2026-09-12T13:00:33Z",
+  "description": "Capital of France",
+  "description_source": "local",
+  "coordinates": {
+   "lat": 48.8567,
+   "lon": 2.3522
+  },
+  "content_urls": {
+   "desktop": {
+    "page": "https://en.wikipedia.org/wiki/Paris",
+    "revisions": "https://en.wikipedia.org/wiki/Paris?action=history",
+    "edit": "https://en.wikipedia.org/wiki/Paris?action=edit",
+    "talk": "https://en.wikipedia.org/wiki/Talk:Paris"
+   },
+   "mobile": {
+    "page": "https://en.wikipedia.org/wiki/Paris",
+    "revisions": "https://en.wikipedia.org/wiki/Special:History/Paris",
+    "edit": "https://en.wikipedia.org/wiki/Paris?action=edit",
+    "talk": "https://en.wikipedia.org/wiki/Talk:Paris"
+   }
+  },
+  "extract": "Paris is the capital and largest city of France, with an estimated city population of 2.04 million in an area of 105.4 km2 (40.7 sq mi), as of January 2026, and a metropolitan population of 13.3 million (2023). Located on the river Seine in the centre of the Île-de-France region, it is the largest metropolitan area and fourth-most populous city in the European Union (EU). Paris is nicknamed the \"City of Light\", partly because of its role in the Age of Enlightenment.",
+  "extract_html": "<p><b>Paris</b> is the capital and largest city of France, with an estimated city population of 2.04 million in an area of 105.4 km<sup>2</sup> (40.7 sq mi), as of January 2026, and a metropolitan population of 13.3 million (2023). Located on the river Seine in the centre of the Île-de-France region, it is the largest metropolitan area and fourth-most populous city in the European Union (EU). Paris is nicknamed the \"City of Light\", partly because of its role in the Age of Enlightenment.</p>"
+ }
+}

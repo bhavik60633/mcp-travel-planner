@@ -1,0 +1,106 @@
+[
+ {
+  "airlines": [
+   "6E"
+  ],
+  "price": "INR 15082",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "BOM",
+    "to": "DXB",
+    "flight_no": "6E1451",
+    "departure": "2026-10-20 08:10",
+    "arrival": "2026-10-20 09:40",
+    "duration_min": 180,
+    "plane": "Airbus A321neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "6E"
+  ],
+  "price": "INR 15082",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "BOM",
+    "to": "DXB",
+    "flight_no": "6E1453",
+    "departure": "2026-10-20 15:05",
+    "arrival": "2026-10-20 16:40",
+    "duration_min": 185,
+    "plane": "Airbus A321neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "6E"
+  ],
+  "price": "INR 15082",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "BOM",
+    "to": "DXB",
+    "flight_no": "6E1455",
+    "departure": "2026-10-20 17:20",
+    "arrival": "2026-10-20 18:45",
+    "duration_min": 175,
+    "plane": "Airbus A321neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "GF"
+  ],
+  "price": "INR 15786",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "BOM",
+    "to": "BAH",
+    "flight_no": "GF57",
+    "departure": "2026-10-20 06:05",
+    "arrival": "2026-10-20 07:30",
+    "duration_min": 235,
+    "plane": "Airbus A321neo"
+   },
+   {
+    "from": "BAH",
+    "to": "DXB",
+    "flight_no": "GF512",
+    "departure": "2026-10-20 20:05",
+    "arrival": "2026-10-20 22:35",
+    "duration_min": 90,
+    "plane": "Airbus A321neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "AI"
+  ],
+  "price": "INR 15841",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "BOM",
+    "to": "DXB",
+    "flight_no": "AI4217",
+    "departure": "2026-10-20 15:55",
+    "arrival": "2026-10-20 17:25",
+    "duration_min": 180,
+    "plane": "Boeing 787"
+   }
+  ],
+  "source": "gf_search"
+ }
+]
