@@ -16,10 +16,14 @@ from agno.models.openai import OpenAIChat
 
 from flights.api import router as flights_router
 from photos.api import router as photos_router
-from places.service import PlaceChecker, PlanReview, get_place_checker
+from places.geo import inside, km_between, span_km
+from places.google import GoogleUnavailable
+from places.service import PlaceChecker, PlanReview, TripPlan, get_place_checker
+from places.stayfind import StayFinder, get_stay_finder
 from plans.days import day_blocks, day_texts, named_days, replace_days
 from plans.stops import MAX_DISTANCE_KM, MAX_TRIP_DAYS, Stop, base_stop, fit_nights, places_section, read_ai_stops, stops_problem, stops_prompt, with_dates
 from plans.text import and_list, day_dates, nearby_rule, without_em_dashes
+from plans.timetable import FAR_KM
 from stays.api import get_stays_service
 from stays.budget import nightly_stay_budget
 from stays.api import router as stays_router
@@ -34,9 +38,12 @@ log = logging.getLogger("yori")
 # --------------------
 # CREATE AGENT (FIXED)
 # --------------------
+# TP-07 D7: a stronger model chooses the places; Yori works out the times. YORI_AI_MODEL can change it.
+AI_MODEL = os.getenv("YORI_AI_MODEL", "").strip() or "gpt-5.4-mini"
+
 agent = Agent(
     model=OpenAIChat(
-        id="gpt-4o-mini",  # ✅ MUST be `id`
+        id=AI_MODEL,  # ✅ MUST be `id`
         api_key=os.getenv("OPENAI_API_KEY")
     ),
     instructions="""
@@ -53,6 +60,30 @@ Don't use em dashes (—).
 
 _BOLD_NAME = re.compile(r"\*\*([^*\n]{2,80}?)\*\*")
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+# TP-07 A3, C2: one area per day, and times that can't move marked for the timetable.
+PLACES_RULE = (
+    "Plan each day around one area: keep each day's places within 50 km of that day's base (your stay, or where you stay that night), "
+    "and cover that area in detail. If somewhere you'd suggest is farther away, give it a day of its own.\n"
+    'When a visit has to happen at a set time, such as a sunset, a show or a boat, write "(fixed time)" right after the place\'s name.\n'
+)
+
+
+def _stay_lines(data: dict) -> str:
+    """Where the traveller stays, for the AI (TP-07 A3)."""
+    lines = []
+    stay = data.get("stay") or {}
+    if stay.get("name"):
+        if stay.get("source") == "area":
+            lines.append(f"Your stay's area: {stay['name']}")
+        else:
+            lines.append(f"Your stay: {stay['name']}" + (f" ({stay['address']})" if stay.get("address") else ""))
+    for stop in data.get("stops") or []:
+        stop_stay = stop.get("stay") or {}
+        if stop_stay.get("name"):
+            where = f" ({stop_stay['address']})" if stop_stay.get("address") and stop_stay.get("source") != "area" else ""
+            lines.append(f"Your stay in {stop['place']}: {stop_stay['name']}{where}")
+    return "".join(f"{line}\n" for line in lines)
 
 
 def _stays_section(stays: list, budget: Optional[dict] = None, where: Optional[str] = None) -> str:
@@ -123,6 +154,7 @@ Preferences: {data['preferences']}
         # Headings name places, not dates, so the AI gets each day's date and weekday here (TP-06 C1).
         prompt += "Dates:\n" + "".join(f"- {line}\n" for line in day_dates(start, days))
     prompt += nearby_rule(data["destination"], int(data["num_days"])) + "\n"
+    prompt += _stay_lines(data) + PLACES_RULE
     if data.get("stops") and start:
         stops = with_dates([(stop["place"], stop["nights"]) for stop in data["stops"]], start)
         prompt += places_section(stops, data.get("stay_per_stop") is not False, start)
@@ -173,9 +205,20 @@ app.include_router(stays_router)
 app.include_router(trip_info_router)
 
 
+class StayRequest(BaseModel):
+    """A stay on the map: a hotel, an Airbnb, or the base area Yori picked (TP-07 A1)."""
+
+    name: str
+    address: Optional[str] = None
+    lat: float
+    lng: float
+    source: str = "google"  # google | airbnb | link | area
+
+
 class StopRequest(BaseModel):
     place: str = ""
     nights: int = 0
+    stay: Optional[StayRequest] = None  # TP-07 A1
 
 
 class TripRequest(BaseModel):
@@ -191,6 +234,7 @@ class TripRequest(BaseModel):
     return_date: Optional[str] = None  # YYYY-MM-DD; every date from start to return is a trip day (TP-06 D1)
     stops: Optional[list[StopRequest]] = None  # several places, in order (TP-06 H5)
     stay_per_stop: Optional[bool] = None  # an Airbnb at each place, or one for the whole trip (TP-06 D13)
+    stay: Optional[StayRequest] = None  # where each day starts and ends (TP-07 A1)
 
 
 def _invalid(message: str) -> JSONResponse:
@@ -237,6 +281,16 @@ def _stay_searches(data: TripRequest) -> list[tuple[Optional[str], StaysQuery]]:
     return [(f"in {stop.place} for its dates", StaysQuery(place=stop.place, checkin=stop.checkin, checkout=stop.checkout, adults=adults)) for stop in stops]
 
 
+def _nightly_budget(data: TripRequest, service: StaysService) -> Optional[dict]:
+    if data.budget <= 0:
+        return None
+    try:
+        return nightly_stay_budget(data.budget, data.currency, data.trip_type, _trip_nights(data), rate_to_inr=service.rate_to_inr)
+    except Exception as exc:
+        log.warning("No stay budget for this itinerary (%s)", type(exc).__name__)
+        return None
+
+
 def _find_stay_groups(data: TripRequest, service: StaysService) -> list[dict]:
     """Real stays within the trip budget's share for stays, when the trip has dates (TP-03 E4, TP-05 D3, TP-06 H6).
 
@@ -245,12 +299,7 @@ def _find_stay_groups(data: TripRequest, service: StaysService) -> list[dict]:
     searches = _stay_searches(data)
     if not searches:
         return []
-    budget = None
-    if data.budget > 0:
-        try:
-            budget = nightly_stay_budget(data.budget, data.currency, data.trip_type, _trip_nights(data), rate_to_inr=service.rate_to_inr)
-        except Exception as exc:
-            log.warning("No stay budget for this itinerary (%s)", type(exc).__name__)
+    budget = _nightly_budget(data, service)
     if budget:
         searches = [(where, replace(query, max_per_night=budget["max_per_night"])) for where, query in searches]
 
@@ -303,10 +352,74 @@ def _plan_payload(data: TripRequest, stays_service: StaysService, trip_info: Tri
     return payload
 
 
-def _checked_response(itinerary: str, data: TripRequest, place_checker: PlaceChecker) -> dict:
+def _trip_plan(data: TripRequest) -> TripPlan:
+    """Where each night is spent, for the timetable (TP-07 A1)."""
+    stops = [
+        {"place": " ".join(stop.place.split()), "nights": stop.nights, "stay": stop.stay.model_dump() if stop.stay else None}
+        for stop in data.stops or []
+    ]
+    has_dates = _iso_date(data.start_date) is not None and _iso_date(data.return_date) is not None
+    return TripPlan(
+        destination=data.destination.strip(),
+        start_date=_start_date(data),
+        num_days=max(data.num_days, 1),
+        nights=_trip_nights(data) if has_dates else None,
+        stay=data.stay.model_dump() if data.stay else None,
+        stops=stops,
+        stay_per_stop=data.stay_per_stop,
+    )
+
+
+def _far_days_section(itinerary: str, moves: list[dict]) -> str:
+    """Asks the AI to rewrite only the days that moved to a far area (TP-07 C3)."""
+    days = [move["day"] for move in moves]
+    named = f"Day {days[0]}" if len(days) == 1 else f"Days {and_list([str(day) for day in days])}"
+    each = "starting with its heading" if len(days) == 1 else "each starting with its heading"
+    lines = [f"\nThis is the traveller's current plan:\n\n{itinerary.strip()}\n", "These days are too far from the stay to plan as they are:"]
+    for move in moves:
+        lines.append(f"- Day {move['day']}: {move['label']}. Plan it in and around {move['area']} only, and cover {move['area']} in detail.")
+    lines.append(
+        f"Rewrite only {named}. Keep the dates, and don't add places from other areas. "
+        f'Reply with only {named}, {each}, for example "## Day {days[0]}: ...". Write nothing else.'
+    )
+    return "\n".join(lines) + "\n"
+
+
+def _far_days_rewriter(data: TripRequest, payload: dict, stays_service: Optional[StaysService]):
+    """The AI rewrites the days in a far area, with real Airbnbs there for those nights (TP-07 C3, C5)."""
+
+    def rewrite(itinerary: str, moves: list[dict], new_stays: list[dict]) -> Optional[str]:
+        prompt = trip_prompt(payload)
+        if stays_service is not None and new_stays:
+            budget = _nightly_budget(data, stays_service)
+            adults = min(max(data.num_travelers, 1), 16)
+            for stay in new_stays:
+                query = StaysQuery(place=stay["place"], checkin=date.fromisoformat(stay["checkin"]), checkout=date.fromisoformat(stay["checkout"]), adults=adults)
+                if budget:
+                    query = replace(query, max_per_night=budget["max_per_night"])
+                try:
+                    found = stays_service.search(query).stays[:6]
+                except Exception as exc:  # stays are a bonus
+                    log.warning("Airbnb stays skipped for a far area (%s)", type(exc).__name__)
+                    continue
+                if found:
+                    prompt += _stays_section(found, budget, f"in {stay['place']} for its dates")
+        prompt += _far_days_section(itinerary, moves)
+        reply = str(agent.run(prompt).content or "")
+        texts = day_texts(reply)
+        days = [move["day"] for move in moves]
+        if any(day not in texts for day in days):
+            log.warning("The AI didn't rewrite every far day")
+            return None
+        return replace_days(itinerary, {day: without_em_dashes(texts[day]) for day in days})
+
+    return rewrite
+
+
+def _checked_response(itinerary: str, data: TripRequest, place_checker: PlaceChecker, replace_place=None, rewrite=None) -> dict:
     review = PlanReview(itinerary)
     try:
-        review = place_checker.review(itinerary, data.destination, replace=suggest_replacement, start_date=_start_date(data))
+        review = place_checker.review(itinerary, data.destination, replace=replace_place, start_date=_start_date(data), trip=_trip_plan(data), rewrite=rewrite)
     except Exception as exc:  # checks never break the itinerary
         log.warning("Google Maps checks skipped for this itinerary (%s)", type(exc).__name__)
     response = {"status": "success", "itinerary": review.itinerary}
@@ -316,6 +429,12 @@ def _checked_response(itinerary: str, data: TripRequest, place_checker: PlaceChe
         response["visits"] = review.visits  # opening hours per visit (TP-05 A)
     if review.travel:
         response["travel"] = review.travel  # travel times between places (TP-05 B)
+    if review.timetable:
+        response["timetable"] = review.timetable  # each day from the stay (TP-07)
+        response["timings_checked"] = review.timings_checked
+        response["timings_message"] = review.timings_message
+    if review.new_stays:
+        response["new_stays"] = review.new_stays  # nights in far areas to find stays for (TP-07 C5)
     return response
 
 
@@ -339,7 +458,7 @@ def plan_trip(
         itinerary = without_em_dashes(run_travel_planner(payload))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    return _checked_response(itinerary, data, place_checker)
+    return _checked_response(itinerary, data, place_checker, suggest_replacement, _far_days_rewriter(data, payload, stays_service))
 
 
 # --------------------
@@ -416,9 +535,107 @@ def revise_plan(
         itinerary = without_em_dashes(reply.strip())
         days = list(range(1, total + 1))
 
-    response = _checked_response(itinerary, data, place_checker)
+    response = _checked_response(itinerary, data, place_checker, suggest_replacement, _far_days_rewriter(data, payload, stays_service))
     response["changed_days"] = days
     return response
+
+
+# --------------------
+# REAL TIMINGS (TP-07)
+# --------------------
+BASE_FALLBACK = "Yori couldn't pick a base area inside {destination}, so plans start from its centre for now."
+BASE_NOT_ON_MAP = "Yori couldn't find {destination} on the map, so plans aren't timed from a base yet."
+
+
+class RetimeRequest(BaseModel):
+    itinerary: str = ""
+    trip: TripRequest
+
+
+@app.post("/api/retime-plan")
+def retime_plan(body: RetimeRequest, place_checker: PlaceChecker = Depends(get_place_checker)):
+    """Re-times a plan from a new stay without asking the AI (TP-07 A2, A4)."""
+    if not body.itinerary.strip():
+        return _invalid("There's no plan to re-time.")
+    problem = _trip_problem(body.trip)
+    if problem:
+        return _invalid(problem)
+    return _checked_response(body.itinerary, body.trip, place_checker)
+
+
+@app.get("/api/stay/find")
+def find_stay(q: str = "", destination: str = "", finder: StayFinder = Depends(get_stay_finder)):
+    """A stay from a hotel's name or a link to it (TP-07 A7)."""
+    return finder.find(q, destination)
+
+
+class BaseAreaRequest(BaseModel):
+    destination: str = ""
+    start_date: str = ""
+    return_date: str = ""
+    num_travelers: int = 2
+    trip_type: str = "Standard"
+    preferences: str = ""
+
+
+def base_prompt(data: BaseAreaRequest, destination: str) -> str:
+    dates = f" from {data.start_date} to {data.return_date}" if data.start_date and data.return_date else ""
+    return (
+        f"Pick one base area inside {destination} for a trip{dates} for {data.num_travelers} travellers, {data.trip_type} style. "
+        f"Preferences: {data.preferences or 'none given'}.\n"
+        "The base area is the town or neighbourhood to stay in: close to most of what they'd like to see, with places to stay and eat.\n"
+        'Reply with only its name and region, in the form "Neighbourhood, Region". Write nothing else.'
+    )
+
+
+def _base_name(reply: str) -> str:
+    line = next((line for line in reply.splitlines() if line.strip()), "")
+    line = re.sub(r"^\s*(?:[-*•]\s*)?(?:base area\s*:\s*)?", "", line, flags=re.IGNORECASE)
+    return " ".join(line.replace("**", "").strip(" .\"'`").split())[:80]
+
+
+def _inside_area(area: dict, spot: dict) -> bool:
+    if area.get("viewport") and span_km(area["viewport"]) >= 5:
+        return inside(area["viewport"], spot)
+    return km_between(area, spot) <= FAR_KM
+
+
+@app.post("/api/plan-base")
+def plan_base(data: BaseAreaRequest, place_checker: PlaceChecker = Depends(get_place_checker)):
+    """A base area inside the destination for a trip without a hotel, checked on the map (TP-07 A8)."""
+    destination = " ".join(data.destination.split())
+    if not destination:
+        return _invalid("Where are you going?")
+    google = place_checker.google
+    if google is None:
+        return {"base": None, "message": None}
+    try:
+        area = google.area(destination)
+    except GoogleUnavailable as exc:
+        log.warning("No base area: the destination couldn't be looked up (%s)", exc)
+        area = None
+    if area is None:
+        return {"base": None, "message": BASE_NOT_ON_MAP.format(destination=destination)}
+    fallback = {
+        "base": {"name": destination, "address": None, "lat": area["lat"], "lng": area["lng"], "source": "area"},
+        "message": BASE_FALLBACK.format(destination=destination),
+    }
+    try:
+        reply = str(agent.run(base_prompt(data, destination)).content or "")
+    except Exception as exc:
+        log.warning("No base area suggested (%s)", type(exc).__name__)
+        return fallback
+    name = _base_name(reply)
+    if not name or name.lower() == destination.lower():
+        return fallback
+    try:
+        spot = google.area(f"{name}, {destination}")
+    except GoogleUnavailable as exc:
+        log.warning("The base area couldn't be checked (%s)", exc)
+        return fallback
+    if spot is None or not _inside_area(area, spot):
+        return fallback
+    return {"base": {"name": name, "address": None, "lat": spot["lat"], "lng": spot["lng"], "source": "area"}, "message": None}
 
 
 # --------------------

@@ -354,6 +354,7 @@ def test_C6_without_weather_or_holidays_the_prompt_is_unchanged(monkeypatch):
 
 def test_C10_health_lists_every_information_service_and_whether_its_set_up(api_client, monkeypatch):
     monkeypatch.delenv("GOOGLE_MAPS_API_KEY", raising=False)
+    monkeypatch.delenv("SERPAPI_API_KEY", raising=False)
 
     services = api_client.get("/api/health").json()["services"]
 
@@ -367,4 +368,7 @@ def test_C10_health_lists_every_information_service_and_whether_its_set_up(api_c
         {"service": "place_checks", "label": "Place checks (Google Maps)", "key": "GOOGLE_MAPS_API_KEY", "set": False, "status": "key missing"},
         # added by TP-05 K1
         {"service": "travel_times", "label": "Travel times (Google Routes)", "key": "GOOGLE_MAPS_API_KEY", "set": False, "status": "key missing"},
+        # added by TP-07 K1
+        {"service": "real_timings", "label": "Real timings (Google Routes)", "key": "GOOGLE_MAPS_API_KEY", "set": False, "status": "key missing"},
+        {"service": "busy_hours", "label": "Busy hours (SerpApi)", "key": "SERPAPI_API_KEY", "set": False, "status": "key missing"},
     ]

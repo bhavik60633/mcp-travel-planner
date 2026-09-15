@@ -129,7 +129,7 @@ def review_client():
 
     clients = []
 
-    def _make(google, routes=None, key=GOOGLE_TEST_KEY, deadline_s=10.0):
+    def _make(google, routes=None, key=GOOGLE_TEST_KEY, deadline_s=10.0, travel_deadline_s=None):
         def http(handler):
             return httpx.Client(transport=httpx.MockTransport(handler))
 
@@ -137,6 +137,8 @@ def review_client():
             google=GooglePlaces(api_key=key, http_client=http(google)) if key else None,
             routes=GoogleRoutes(api_key=key, http_client=http(routes)) if key and routes is not None else None,
             deadline_s=deadline_s,
+            # TP-07 X1 (D11): travel times have their own limit after the place checks; TP-05 tests give both the same.
+            travel_deadline_s=deadline_s if travel_deadline_s is None else travel_deadline_s,
             today=lambda: TODAY,
         )
         stays = StaysService(source=NoStays(), clock=FakeClock(), today=lambda: TODAY)

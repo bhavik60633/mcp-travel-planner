@@ -125,7 +125,9 @@ def test_A2_place_checks_ask_google_for_opening_hours(review_client, monkeypatch
 
     plan(client, monkeypatch, "## Day 1\n- 10:00–11:00: **Hawa Mahal**\n")
 
-    fields = set(places.requests[0].headers["X-Goog-FieldMask"].split(","))
+    # TP-07 X1: the first request can be the destination's area (N1), so this checks the place's own search.
+    search = next(request for request in places.requests if b"Hawa Mahal" in request.content)
+    fields = set(search.headers["X-Goog-FieldMask"].split(","))
     assert {"places.regularOpeningHours", "places.currentOpeningHours", "places.utcOffsetMinutes"} <= fields
 
 

@@ -101,8 +101,13 @@ def normalize_listing(listing: dict, query: StaysQuery) -> Optional[dict]:
     if money:
         amount = int(round(float(money.group(2).replace(",", ""))))
         currency = _SYMBOLS[money.group(1)]
+        priced_nights = re.search(r"\bfor (\d+) nights?\b", price_label)
         if re.search(r"\b(per|a) night\b", price_label):
             per_night, total = amount, amount * nights
+        elif priced_nights and int(priced_nights.group(1)) not in (0, nights):
+            # The price is for the nights Airbnb says, not always the nights asked for (TP-07 C5).
+            per_night = int(round(amount / int(priced_nights.group(1))))
+            total = per_night * nights
         else:
             total, per_night = amount, int(round(amount / nights))
 

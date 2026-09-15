@@ -46,8 +46,9 @@ def test_B1_travel_times_by_car_and_public_transport_between_each_pair_of_places
     assert drive.headers["X-Goog-Api-Key"] == GOOGLE_TEST_KEY
     assert {"routes.duration", "routes.distanceMeters"} <= set(drive.headers["X-Goog-FieldMask"].split(","))
     drive_body = json.loads(drive.content)
-    assert drive_body["routingPreference"] == "TRAFFIC_UNAWARE"
-    assert "departureTime" not in drive_body
+    # TP-07 X1 (D4): live traffic at the hour you'd leave.
+    assert drive_body["routingPreference"] == "TRAFFIC_AWARE"
+    assert drive_body["departureTime"] == "2026-10-19T05:30:00Z"
 
     transit_body = routes.body_for("Hawa Mahal", "Tapri Central", "TRANSIT")
     assert transit_body["departureTime"] == "2026-10-19T05:30:00Z"  # 11:00 AM in Jaipur (UTC+5:30)

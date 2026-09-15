@@ -5,10 +5,12 @@ from __future__ import annotations
 import base64
 import copy
 import json
+import re
 import threading
 import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
+from typing import Optional
 from urllib.parse import parse_qs, urlparse
 
 import httpx
@@ -618,3 +620,198 @@ class FakeGoogleRoutes:
     def body_for(self, origin: str, destination: str, mode: str):
         request = self.request_for(origin, destination, mode)
         return json.loads(request.content) if request is not None else None
+
+
+# --------------------------------------------------------------------------- TP-07
+
+
+def km_between(a: tuple[float, float], b: tuple[float, float]) -> float:
+    import math
+
+    lat1, lng1, lat2, lng2 = map(math.radians, (a[0], a[1], b[0], b[1]))
+    h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lng2 - lng1) / 2) ** 2
+    return 2 * 6371.0 * math.asin(math.sqrt(h))
+
+
+class FakeMaps:
+    """Stands in for Google Places API (New) and Routes API in TP-07 tests, in the reply formats Google documents.
+
+    - `places`: {name: {"lat", "lng", "town", "types", "reviews", "hours", "matches", "id", "offset"}}. Text Search returns every
+      place whose name (or one of its `matches`) equals the query's name before the first ", ", in this order, keeping only
+      those inside `locationRestriction` when one is sent.
+    - `areas`: {name: {"lat", "lng", "low": (lat, lng), "high": (lat, lng)}}, found when the whole query is the area's name.
+    - `points`: other named spots Routes knows by their coordinates (stays, jetties).
+    - Car trips take `drive[(from, to)]` minutes (either way round), otherwise 2 minutes per km. A pair in `water` has no road.
+    - `ferries`: {(from, to): {"line", "departures": ["09:00", ...] (local), "minutes"}} answers TRANSIT requests with a boat.
+    """
+
+    def __init__(self, places, areas=None, points=None, drive=None, water=(), ferries=None, offset=330, block_search=None, fail_routes=None):
+        self.places = places
+        self.areas = areas or {}
+        self.points = points or {}
+        self.drive = drive or {}
+        self.water = {frozenset(pair) for pair in water}
+        self.ferries = ferries or {}
+        self.offset = offset
+        self.block_search = block_search
+        self.fail_routes = fail_routes
+        self.requests: list[httpx.Request] = []
+        self._lock = threading.Lock()
+        self._names = {}
+        for name, spec in {**places, **self.areas, **self.points}.items():
+            self._names[(round(spec["lat"], 5), round(spec["lng"], 5))] = name
+
+    # ----- Places API (New)
+
+    @staticmethod
+    def place_id(name: str) -> str:
+        return "place-" + re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+    def _place(self, name: str, spec: dict) -> dict:
+        place = {
+            "id": spec.get("id") or self.place_id(name),
+            "displayName": {"text": spec.get("display", name), "languageCode": "en"},
+            "formattedAddress": f"{spec.get('display', name)}, {spec.get('town', '')}",
+            "addressComponents": [{"longText": spec["town"], "shortText": spec["town"], "types": ["locality", "political"]}] if spec.get("town") else [],
+            "location": {"latitude": spec["lat"], "longitude": spec["lng"]},
+            "googleMapsUri": f"https://maps.google.com/?cid={spec.get('id') or self.place_id(name)}",
+            "businessStatus": "OPERATIONAL",
+            "rating": 4.5,
+            "userRatingCount": spec.get("reviews", 1000),
+            "utcOffsetMinutes": spec.get("offset", self.offset),
+            "types": spec.get("types", ["tourist_attraction"]),
+        }
+        if spec.get("hours") is not None:
+            place["regularOpeningHours"] = spec["hours"]
+        if "low" in spec:
+            place["viewport"] = {"low": {"latitude": spec["low"][0], "longitude": spec["low"][1]}, "high": {"latitude": spec["high"][0], "longitude": spec["high"][1]}}
+        return place
+
+    def _search(self, body: dict) -> httpx.Response:
+        query = body["textQuery"]
+        if query in self.areas:
+            return httpx.Response(200, json={"places": [self._place(query, self.areas[query])]})
+        name = query.split(", ")[0].lower()
+        restriction = (body.get("locationRestriction") or {}).get("rectangle")
+        found = []
+        for place_name, spec in self.places.items():
+            if name != place_name.lower() and name not in [m.lower() for m in spec.get("matches", [])]:
+                continue
+            if restriction and not (
+                restriction["low"]["latitude"] <= spec["lat"] <= restriction["high"]["latitude"]
+                and restriction["low"]["longitude"] <= spec["lng"] <= restriction["high"]["longitude"]
+            ):
+                continue
+            found.append(self._place(place_name, spec))
+        return httpx.Response(200, json={"places": found[: body.get("pageSize", 20)]} if found else {})
+
+    def place_searches(self) -> list[dict]:
+        """Each Text Search as {"query", "restriction": ((low lat, low lng), (high lat, high lng)) or None}."""
+        searches = []
+        for request in self.requests:
+            if request.url.path != "/v1/places:searchText":
+                continue
+            body = json.loads(request.content)
+            rect = (body.get("locationRestriction") or {}).get("rectangle")
+            searches.append({
+                "query": body["textQuery"],
+                "restriction": ((rect["low"]["latitude"], rect["low"]["longitude"]), (rect["high"]["latitude"], rect["high"]["longitude"])) if rect else None,
+            })
+        return searches
+
+    # ----- Routes API
+
+    def _name(self, waypoint: dict) -> Optional[str]:
+        point = waypoint["location"]["latLng"]
+        return self._names.get((round(point["latitude"], 5), round(point["longitude"], 5)))
+
+    def _spot(self, name: str) -> tuple[float, float]:
+        spec = {**self.places, **self.areas, **self.points}[name]
+        return spec["lat"], spec["lng"]
+
+    def _route(self, body: dict) -> httpx.Response:
+        if self.fail_routes:
+            return httpx.Response(self.fail_routes, json={"error": {"code": self.fail_routes, "status": "RESOURCE_EXHAUSTED"}})
+        origin, destination, mode = self._name(body["origin"]), self._name(body["destination"]), body["travelMode"]
+        if origin is None or destination is None:
+            return httpx.Response(200, json={})
+        km = km_between(self._spot(origin), self._spot(destination))
+        if mode == "DRIVE":
+            if frozenset((origin, destination)) in self.water:
+                return httpx.Response(200, json={})
+            minutes = self.drive.get((origin, destination)) or self.drive.get((destination, origin)) or max(1, round(km * 2))
+            return httpx.Response(200, json={"routes": [{"duration": f"{minutes * 60}s", "distanceMeters": round(km * 1250)}]})
+        if mode == "WALK":
+            if frozenset((origin, destination)) in self.water:
+                return httpx.Response(200, json={})
+            return httpx.Response(200, json={"routes": [{"duration": f"{max(1, round(km * 15)) * 60}s", "distanceMeters": round(km * 1250)}]})
+        ferry = self.ferries.get((origin, destination))
+        if mode != "TRANSIT" or not ferry:
+            return httpx.Response(200, json={})
+        asked = datetime.fromisoformat(body["departureTime"].replace("Z", "+00:00"))
+        local = asked + timedelta(minutes=self.offset)
+        for departure in ferry["departures"]:
+            hour, minute = map(int, departure.split(":"))
+            leaves_local = local.replace(hour=hour, minute=minute, second=0, microsecond=0)
+            if leaves_local >= local:
+                leaves = leaves_local - timedelta(minutes=self.offset)
+                steps = [
+                    {"travelMode": "WALK", "staticDuration": "300s"},
+                    {"travelMode": "TRANSIT", "staticDuration": f"{ferry['minutes'] * 60}s", "transitDetails": {
+                        "stopDetails": {"departureTime": leaves.strftime("%Y-%m-%dT%H:%M:%SZ"), "departureStop": {"name": ferry.get("from_stop", origin)}, "arrivalStop": {"name": ferry.get("to_stop", destination)}},
+                        "transitLine": {"name": ferry["line"], "vehicle": {"name": {"text": "Ferry"}, "type": "FERRY"}},
+                    }},
+                    {"travelMode": "WALK", "staticDuration": "120s"},
+                ]
+                total = int((leaves - asked).total_seconds()) + ferry["minutes"] * 60 + 420
+                return httpx.Response(200, json={"routes": [{"duration": f"{total}s", "distanceMeters": round(km * 1000), "legs": [{"steps": steps}]}]})
+        return httpx.Response(200, json={})
+
+    def drive_bodies(self) -> list[tuple[str, str, dict]]:
+        found = []
+        for request in self.requests:
+            if request.url.path.endswith(":computeRoutes"):
+                body = json.loads(request.content)
+                if body["travelMode"] == "DRIVE":
+                    found.append((self._name(body["origin"]), self._name(body["destination"]), body))
+        return found
+
+    def __call__(self, request: httpx.Request) -> httpx.Response:
+        with self._lock:
+            self.requests.append(request)
+        path = request.url.path
+        if path == "/v1/places:searchText":
+            if self.block_search is not None:
+                time.sleep(self.block_search)
+            return self._search(json.loads(request.content))
+        if path.startswith("/v1/places/"):
+            place_id = path.rsplit("/", 1)[1]
+            for name, spec in {**self.places, **self.areas}.items():
+                if (spec.get("id") or self.place_id(name)) == place_id:
+                    return httpx.Response(200, json=self._place(name, spec))
+            return httpx.Response(404, json={"error": {"code": 404, "status": "NOT_FOUND"}})
+        if path.endswith(":computeRoutes"):
+            return self._route(json.loads(request.content))
+        return httpx.Response(404, json={"error": {"code": 404}})
+
+
+class FakeSerpApi:
+    """Stands in for SerpApi's Google Maps place results. `busy` maps a Google place ID to {weekday: {hour: busyness score}}."""
+
+    def __init__(self, busy=None, fail=None):
+        self.busy = busy or {}
+        self.fail = fail
+        self.requests: list[httpx.Request] = []
+
+    def __call__(self, request: httpx.Request) -> httpx.Response:
+        self.requests.append(request)
+        if self.fail:
+            return httpx.Response(self.fail, json={"error": "simulated"})
+        week = self.busy.get(request.url.params.get("place_id"))
+        if week is None:
+            return httpx.Response(200, json={"place_results": {"title": "A place"}})
+        graph = {
+            day: [{"time": f"{hour % 12 or 12} {'AM' if hour < 12 else 'PM'}", "busyness_score": score} for hour, score in sorted(hours.items())]
+            for day, hours in week.items()
+        }
+        return httpx.Response(200, json={"place_results": {"popular_times": {"graph_results": graph}}})

@@ -102,7 +102,8 @@ def test_B1_every_place_the_ai_names_is_looked_up_on_google_once(places_client, 
     body = r.json()
     assert body["status"] == "success"
     assert body["itinerary"] == OPEN_PLACES_PLAN
-    assert sorted(google.searches()) == ["Amber Fort, Jaipur", "Hawa Mahal, Jaipur"]
+    # TP-07 X1: without a stay, the destination's area is looked up first so places are searched near it (N1).
+    assert sorted(google.searches()) == ["Amber Fort, Jaipur", "Hawa Mahal, Jaipur", "Jaipur"]
     assert body["places"] == [
         HAWA_MAHAL,
         {
@@ -118,13 +119,16 @@ def test_B1_every_place_the_ai_names_is_looked_up_on_google_once(places_client, 
             "reason": None,
         },
     ]
-    request = google.requests[0]
+    # TP-07 X1: the first request is the destination's area (N1), so this checks a place's own search.
+    request = next(request for request in google.requests if b"Hawa Mahal" in request.content)
     assert request.headers["X-Goog-Api-Key"] == GOOGLE_KEY
     assert set(request.headers["X-Goog-FieldMask"].split(",")) == {
         "places.id", "places.displayName", "places.formattedAddress", "places.location",
         "places.googleMapsUri", "places.businessStatus", "places.rating", "places.userRatingCount",
         # added by TP-05 A2: opening hours, and the time zone to read them in
         "places.regularOpeningHours", "places.currentOpeningHours", "places.utcOffsetMinutes",
+        # added by TP-07: the kind of place (meal or sight) and its town (C1, F1)
+        "places.types", "places.addressComponents",
     }
 
 
@@ -182,6 +186,7 @@ def test_B2_closed_or_unknown_places_are_replaced_once_or_marked(places_client, 
         "reason": "not found on Google Maps",
     }
     assert sorted(google.searches()) == sorted([
+        "Jaipur",  # TP-07 X1: the destination's area (N1)
         "Old Café Nirvana, Jaipur", "Hawa Mahal, Jaipur", "Imaginary Rooftop, Jaipur", "Tapri Central, Jaipur", "Nowhere Garden, Jaipur",
     ])
 
@@ -249,7 +254,8 @@ def test_B4_only_google_place_ids_are_kept_and_details_are_fetched_fresh(places_
 
     assert body["places"][0] == HAWA_MAHAL | {"rating": 4.5, "reviews": 190001}
     assert sorted(google.detail_ids()) == ["test-amber-fort", "test-hawa-mahal"]
-    assert len(google.searches()) == 2  # the second itinerary used the stored IDs
+    # The second itinerary used the stored IDs. TP-07 X1: each itinerary also looks up the destination's area (N1).
+    assert len([search for search in google.searches() if search != "Jaipur"]) == 2
 
 
 def test_B4_a_slow_google_never_blocks_the_itinerary(places_client, monkeypatch):

@@ -45,14 +45,20 @@ class AirbnbMcpSource:
             raise StaysUnavailable("not_installed")
         return asyncio.run(self._search(arguments))
 
-    async def _search(self, arguments: dict) -> dict:
+    def listing_details(self, arguments: dict) -> dict:
+        """One listing's details, including its map position (TP-07 A7)."""
+        if not self.server_path.exists():
+            raise StaysUnavailable("not_installed")
+        return asyncio.run(self._search(arguments, tool="airbnb_listing_details"))
+
+    async def _search(self, arguments: dict, tool: str = "airbnb_search") -> dict:
         from mcp import ClientSession, StdioServerParameters
         from mcp.client.stdio import stdio_client
 
         async with stdio_client(StdioServerParameters(command=self.node, args=self.server_args())) as (read, write):
             async with ClientSession(read, write) as session:
                 await session.initialize()
-                result = await session.call_tool("airbnb_search", arguments)
+                result = await session.call_tool(tool, arguments)
 
         text = "".join(getattr(part, "text", "") or "" for part in result.content)
         try:

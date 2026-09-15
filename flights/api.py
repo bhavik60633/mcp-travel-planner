@@ -14,7 +14,8 @@ from .ordering import SORTS, order_offers
 from .service import UNAVAILABLE_MESSAGE, FlightService, FlightsUnavailable, OutboundNotFound
 from .sources import build_date_sources, build_sources
 from .validation import InvalidRequest, parse_dates_query, parse_flight_query
-from places.service import place_checks_status, travel_times_status
+from places.service import place_checks_status, real_timings_status, travel_times_status
+from plans.busy import busy_hours_status
 from tripinfo.service import services_status
 
 router = APIRouter()
@@ -146,5 +147,5 @@ def health(service: FlightService = Depends(get_flight_service)):
             for feature, label, key in FEATURES
         ],
         # Information services behind trip essentials and place checks (TP-04 B5, C10).
-        "services": [*services_status(), place_checks_status(), travel_times_status()],
+        "services": [*services_status(), place_checks_status(), travel_times_status(), real_timings_status(), busy_hours_status()],
     }
