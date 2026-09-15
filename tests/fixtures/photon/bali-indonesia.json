@@ -1,0 +1,44 @@
+{
+ "query": "Bali, Indonesia",
+ "params": {
+  "q": "Bali, Indonesia",
+  "lang": "en",
+  "limit": 1
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 1615621,
+     "osm_key": "place",
+     "osm_value": "state",
+     "type": "state",
+     "name": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extra": {
+      "admin_level": "4"
+     },
+     "extent": [
+      114.4126778,
+      -7.4627963,
+      115.8324222,
+      -9.0502287
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.1919203,
+      -8.2271303
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,55 @@
+{
+  "_note": "Hand-written in the Places API (New) reply format Google documents for places:searchText and places/{id} (14 Sep 2026). There was no Google key yet to capture real replies; LIVE B8 checks the real service once GOOGLE_MAPS_API_KEY is set.",
+  "places": {
+    "Hawa Mahal": {
+      "id": "test-hawa-mahal",
+      "displayName": {"text": "Hawa Mahal", "languageCode": "en"},
+      "formattedAddress": "Hawa Mahal Rd, Badi Choupad, J.D.A. Market, Pink City, Jaipur, Rajasthan 302002, India",
+      "location": {"latitude": 26.9239363, "longitude": 75.8267438},
+      "googleMapsUri": "https://maps.google.com/?cid=1001",
+      "businessStatus": "OPERATIONAL",
+      "rating": 4.4,
+      "userRatingCount": 190000
+    },
+    "Amber Fort": {
+      "id": "test-amber-fort",
+      "displayName": {"text": "Amber Palace", "languageCode": "en"},
+      "formattedAddress": "Devisinghpura, Amer, Jaipur, Rajasthan 302001, India",
+      "location": {"latitude": 26.9854865, "longitude": 75.8513454},
+      "googleMapsUri": "https://maps.google.com/?cid=1002",
+      "businessStatus": "OPERATIONAL",
+      "rating": 4.6,
+      "userRatingCount": 120000
+    },
+    "Old Café Nirvana": {
+      "id": "test-old-cafe-nirvana",
+      "displayName": {"text": "Old Café Nirvana", "languageCode": "en"},
+      "formattedAddress": "MI Road, Jaipur, Rajasthan 302001, India",
+      "location": {"latitude": 26.915, "longitude": 75.81},
+      "googleMapsUri": "https://maps.google.com/?cid=1003",
+      "businessStatus": "CLOSED_PERMANENTLY",
+      "rating": 4.1,
+      "userRatingCount": 850
+    },
+    "Jal Mahal": {
+      "id": "test-jal-mahal",
+      "displayName": {"text": "Jal Mahal", "languageCode": "en"},
+      "formattedAddress": "Amer Rd, Jal Mahal, Jaipur, Rajasthan 302002, India",
+      "location": {"latitude": 26.9535, "longitude": 75.8462},
+      "googleMapsUri": "https://maps.google.com/?cid=1004",
+      "businessStatus": "CLOSED_TEMPORARILY",
+      "rating": 4.3,
+      "userRatingCount": 60000
+    },
+    "Tapri Central": {
+      "id": "test-tapri-central",
+      "displayName": {"text": "Tapri Central", "languageCode": "en"},
+      "formattedAddress": "Prithviraj Rd, C Scheme, Jaipur, Rajasthan 302001, India",
+      "location": {"latitude": 26.9005, "longitude": 75.8061},
+      "googleMapsUri": "https://maps.google.com/?cid=1005",
+      "businessStatus": "OPERATIONAL",
+      "rating": 4.5,
+      "userRatingCount": 21000
+    }
+  }
+}

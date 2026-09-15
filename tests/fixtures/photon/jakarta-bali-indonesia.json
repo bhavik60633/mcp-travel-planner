@@ -1,0 +1,48 @@
+{
+ "query": "Jakarta, Bali, Indonesia",
+ "params": {
+  "q": "Jakarta, Bali, Indonesia",
+  "lang": "en",
+  "limit": 1
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 5802218,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "locality",
+     "name": "Kampung Bali",
+     "district": "Tanah Abang",
+     "city": "Jakarta",
+     "state": "Java",
+     "country": "Indonesia",
+     "postcode": "10250",
+     "countrycode": "ID",
+     "extra": {
+      "admin_level": "7"
+     },
+     "extent": [
+      106.810362,
+      -6.181537,
+      106.8232852,
+      -6.188721
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      106.8160095,
+      -6.1849724
+     ]
+    }
+   }
+  ]
+ }
+}

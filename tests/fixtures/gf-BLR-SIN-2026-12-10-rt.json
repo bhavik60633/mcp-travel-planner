@@ -1,0 +1,115 @@
+[
+ {
+  "airlines": [
+   "UL"
+  ],
+  "price": "INR 39302",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "BLR",
+    "to": "CMB",
+    "flight_no": "UL1174",
+    "departure": "2026-12-10 09:55",
+    "arrival": "2026-12-10 11:25",
+    "duration_min": 90,
+    "plane": "Airbus A321 (Sharklets)"
+   },
+   {
+    "from": "CMB",
+    "to": "SIN",
+    "flight_no": "UL308",
+    "departure": "2026-12-10 12:10",
+    "arrival": "2026-12-10 18:40",
+    "duration_min": 240,
+    "plane": "Airbus A330"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "SQ"
+  ],
+  "price": "INR 40310",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "BLR",
+    "to": "SIN",
+    "flight_no": "SQ509",
+    "departure": "2026-12-10 11:50",
+    "arrival": "2026-12-10 19:05",
+    "duration_min": 285,
+    "plane": "Airbus A350"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "SQ"
+  ],
+  "price": "INR 40310",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "BLR",
+    "to": "SIN",
+    "flight_no": "SQ511",
+    "departure": "2026-12-10 23:10",
+    "arrival": "2026-12-11 06:15",
+    "duration_min": 275,
+    "plane": "Airbus A350"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "6E"
+  ],
+  "price": "INR 46125",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "BLR",
+    "to": "SIN",
+    "flight_no": "6E1457",
+    "departure": "2026-12-10 10:20",
+    "arrival": "2026-12-10 17:40",
+    "duration_min": 290,
+    "plane": "Airbus A321neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "TG"
+  ],
+  "price": "INR 48406",
+  "stops": 1,
+  "segments": [
+   {
+    "from": "BLR",
+    "to": "BKK",
+    "flight_no": "TG326",
+    "departure": "2026-12-10 01:10",
+    "arrival": "2026-12-10 06:25",
+    "duration_min": 225,
+    "plane": "Boeing 787"
+   },
+   {
+    "from": "BKK",
+    "to": "SIN",
+    "flight_no": "TG403",
+    "departure": "2026-12-10 07:45",
+    "arrival": "2026-12-10 11:15",
+    "duration_min": 150,
+    "plane": "Airbus A350"
+   }
+  ],
+  "source": "gf_search"
+ }
+]

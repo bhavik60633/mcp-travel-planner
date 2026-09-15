@@ -1,0 +1,359 @@
+{
+ "query": "jaip",
+ "params": {
+  "q": "jaip",
+  "lang": "en",
+  "limit": 12
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 315734346,
+     "osm_key": "place",
+     "osm_value": "city",
+     "type": "district",
+     "name": "Jaipur",
+     "city": "Jaipur Municipal Corporation",
+     "county": "Jaipur Tehsil",
+     "state": "Rajasthan",
+     "country": "India",
+     "postcode": "302001",
+     "countrycode": "IN"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      75.8189817,
+      26.9154576
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 16512499,
+     "osm_key": "boundary",
+     "osm_value": "administrative",
+     "type": "district",
+     "name": "Jaipa",
+     "county": "Singrauli Tahsil",
+     "state": "Madhya Pradesh",
+     "country": "India",
+     "countrycode": "IN",
+     "extra": {
+      "admin_level": "9"
+     },
+     "extent": [
+      82.5260196,
+      24.0335526,
+      82.5484473,
+      24.0079079
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      82.5405302,
+      24.020952
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 1950062,
+     "osm_key": "boundary",
+     "osm_value": "administrative",
+     "type": "county",
+     "name": "Jaipur",
+     "state": "Rajasthan",
+     "country": "India",
+     "countrycode": "IN",
+     "extra": {
+      "admin_level": "5"
+     },
+     "extent": [
+      74.9143445,
+      27.5184801,
+      76.2832045,
+      26.4404606
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      75.7122089,
+      26.9784335
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 28719635,
+     "osm_key": "aeroway",
+     "osm_value": "aerodrome",
+     "type": "house",
+     "name": "Jaipur International Airport",
+     "street": "Prabhu Dayal Marg",
+     "district": "Jagatpura",
+     "county": "Sanganer Tehsil",
+     "state": "Rajasthan",
+     "country": "India",
+     "postcode": "302030",
+     "countrycode": "IN",
+     "extent": [
+      75.793971,
+      26.8361298,
+      75.844245,
+      26.8200575
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      75.8079888,
+      26.8281087
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 10370455,
+     "osm_key": "boundary",
+     "osm_value": "administrative",
+     "type": "county",
+     "name": "Jaipur",
+     "state": "West Bengal",
+     "country": "India",
+     "countrycode": "IN",
+     "extra": {
+      "admin_level": "6"
+     },
+     "extent": [
+      86.0162778,
+      23.5868814,
+      86.2475842,
+      23.359395
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      86.1364125,
+      23.4732498
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 703381473,
+     "osm_key": "place",
+     "osm_value": "locality",
+     "type": "locality",
+     "name": "Jaipa",
+     "city": "Uribia",
+     "state": "La Guajira",
+     "country": "Colombia",
+     "countrycode": "CO"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      -72.1897224,
+      11.7347931
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 2669084994,
+     "osm_key": "railway",
+     "osm_value": "station",
+     "type": "house",
+     "name": "Jaipur Junction",
+     "street": "Ram Mandir Road",
+     "locality": "Hasanpura-A",
+     "district": "Bani Park",
+     "city": "Jaipur Municipal Corporation",
+     "county": "Jaipur Tehsil",
+     "state": "Rajasthan",
+     "country": "India",
+     "postcode": "302001",
+     "countrycode": "IN"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      75.7866539,
+      26.9207888
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 7923743,
+     "osm_key": "boundary",
+     "osm_value": "administrative",
+     "type": "city",
+     "name": "Jaipur Municipal Corporation",
+     "county": "Jaipur Tehsil",
+     "state": "Rajasthan",
+     "country": "India",
+     "countrycode": "IN",
+     "extra": {
+      "admin_level": "8"
+     },
+     "extent": [
+      75.6887556,
+      27.0218662,
+      75.9118168,
+      26.7723494
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      75.8021251,
+      26.896945
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 11368300693,
+     "osm_key": "railway",
+     "osm_value": "station",
+     "type": "house",
+     "name": "Jaiprakash Nagar",
+     "street": "Wardha Road Flyover",
+     "district": "Dhantoli",
+     "city": "Nagpur",
+     "county": "Nagpur Urban Taluka",
+     "state": "Maharashtra",
+     "country": "India",
+     "postcode": "440005",
+     "countrycode": "IN"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      79.068179,
+      21.1036395
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 9644091,
+     "osm_key": "boundary",
+     "osm_value": "administrative",
+     "type": "county",
+     "name": "Jaipur Tehsil",
+     "state": "Rajasthan",
+     "country": "India",
+     "countrycode": "IN",
+     "extra": {
+      "admin_level": "6"
+     },
+     "extent": [
+      75.4991626,
+      27.0576943,
+      75.9103775,
+      26.8492678
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      75.7033028,
+      26.9525243
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 359770137,
+     "osm_key": "historic",
+     "osm_value": "monument",
+     "type": "house",
+     "name": "Jaipur Column",
+     "street": "Rajpath",
+     "locality": "Central Secretariat",
+     "district": "New Delhi",
+     "city": "Delhi",
+     "country": "India",
+     "postcode": "110004",
+     "countrycode": "IN",
+     "extent": [
+      77.2017651,
+      28.614283,
+      77.2018368,
+      28.6142136
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      77.2018009,
+      28.6142483
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 14280773,
+     "osm_key": "boundary",
+     "osm_value": "administrative",
+     "type": "district",
+     "name": "Jaipur Londe",
+     "county": "Khamgaon",
+     "state": "Maharashtra",
+     "country": "India",
+     "countrycode": "IN",
+     "extra": {
+      "admin_level": "9"
+     },
+     "extent": [
+      76.5830939,
+      20.7647817,
+      76.614232,
+      20.7277293
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      76.5993163,
+      20.7476935
+     ]
+    }
+   }
+  ]
+ }
+}

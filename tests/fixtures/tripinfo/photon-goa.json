@@ -1,0 +1,141 @@
+{
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 11251493,
+     "osm_key": "place",
+     "osm_value": "state",
+     "type": "state",
+     "name": "Goa",
+     "country": "India",
+     "countrycode": "IN",
+     "extra": {
+      "admin_level": "4"
+     },
+     "extent": [
+      73.6756012,
+      15.8007631,
+      74.3361139,
+      14.7529315
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      74.0855134,
+      15.3004543
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 198509600,
+     "osm_key": "place",
+     "osm_value": "town",
+     "type": "city",
+     "name": "Goa",
+     "state": "Camarines Sur",
+     "country": "Philippines",
+     "postcode": "4423",
+     "countrycode": "PH"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      123.4885073,
+      13.6973443
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 902955577,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Goa",
+     "county": "Toma",
+     "state": "Boucle du Mouhoun",
+     "country": "Burkina Faso",
+     "countrycode": "BF"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      -2.9023135,
+      12.6049118
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 785860594,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Goa",
+     "county": "Agulsky District",
+     "state": "Dagestan",
+     "country": "Russia",
+     "countrycode": "RU",
+     "extent": [
+      47.6990425,
+      41.7581396,
+      47.7073681,
+      41.7506801
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      47.700848,
+      41.753822
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 91549529,
+     "osm_key": "aeroway",
+     "osm_value": "aerodrome",
+     "type": "house",
+     "name": "Goa International Airport",
+     "street": "Airport Road",
+     "district": "Chicalim",
+     "city": "Vasco da Gama",
+     "county": "Mormugao",
+     "state": "Goa",
+     "country": "India",
+     "postcode": "403802",
+     "countrycode": "IN",
+     "extent": [
+      73.8141645,
+      15.3878055,
+      73.8511499,
+      15.3733674
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      73.8317181,
+      15.3805714
+     ]
+    }
+   }
+  ]
+ }
+}

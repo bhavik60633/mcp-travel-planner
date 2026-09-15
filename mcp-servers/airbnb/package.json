@@ -1,0 +1,8 @@
+{
+  "name": "yori-airbnb-mcp",
+  "private": true,
+  "description": "Pinned Airbnb MCP server used by the Yori backend (TP-03 E1-E5)",
+  "dependencies": {
+    "@openbnb/mcp-server-airbnb": "0.3.0"
+  }
+}

@@ -1,0 +1,97 @@
+[
+ {
+  "airlines": [
+   "6E"
+  ],
+  "price": "INR 14876",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "IXL",
+    "to": "DEL",
+    "flight_no": "6E2004",
+    "departure": "2026-10-05 07:45",
+    "arrival": "2026-10-05 09:05",
+    "duration_min": 80,
+    "plane": "Airbus A320neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "AI"
+  ],
+  "price": "INR 14948",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "IXL",
+    "to": "DEL",
+    "flight_no": "AI2480",
+    "departure": "2026-10-05 06:55",
+    "arrival": "2026-10-05 08:15",
+    "duration_min": 80,
+    "plane": "Airbus A320neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "6E"
+  ],
+  "price": "INR 16135",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "IXL",
+    "to": "DEL",
+    "flight_no": "6E6822",
+    "departure": "2026-10-05 13:35",
+    "arrival": "2026-10-05 14:55",
+    "duration_min": 80,
+    "plane": "Airbus A320neo"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "SG"
+  ],
+  "price": "INR 17999",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "IXL",
+    "to": "DEL",
+    "flight_no": "SG128",
+    "departure": "2026-10-05 06:45",
+    "arrival": "2026-10-05 08:10",
+    "duration_min": 85,
+    "plane": "Boeing 737"
+   }
+  ],
+  "source": "gf_search"
+ },
+ {
+  "airlines": [
+   "AI"
+  ],
+  "price": "INR 20046",
+  "stops": 0,
+  "segments": [
+   {
+    "from": "IXL",
+    "to": "DEL",
+    "flight_no": "AI2455",
+    "departure": "2026-10-05 10:00",
+    "arrival": "2026-10-05 11:30",
+    "duration_min": 90,
+    "plane": "Airbus A320neo"
+   }
+  ],
+  "source": "gf_search"
+ }
+]

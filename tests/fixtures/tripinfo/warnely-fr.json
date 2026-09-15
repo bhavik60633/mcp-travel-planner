@@ -1,0 +1,107 @@
+{
+ "status": 200,
+ "body": {
+  "methodology": "https://www.warnely.com/guides/methodology",
+  "licence": "CC BY 4.0",
+  "attribution": "Warnely",
+  "country": {
+   "iso2": "FR",
+   "iso3": "FRA",
+   "name": "France",
+   "region": "Europe",
+   "risk_score": 27,
+   "risk_tier": "Exercise Normal Caution",
+   "flag": "🇫🇷",
+   "summary": "Pickpocketing is the main tourist risk. World-class infrastructure and healthcare.",
+   "breakdown": {
+    "composite": 27,
+    "components": {
+     "editorial": {
+      "value": 29,
+      "weight": 0.5
+     },
+     "authority": {
+      "value": 20,
+      "weight": 0.3,
+      "sources": [
+       "FCDO",
+       "US State"
+      ],
+      "reason": "US State Level 2 (Exercise Increased Caution)"
+     },
+     "structural": {
+      "value": 39,
+      "weight": 0.15,
+      "sources": [
+       "GPI 2025",
+       "WGI 2024"
+      ],
+      "breakdown": {
+       "cc": 26,
+       "pv": 55,
+       "rl": 30,
+       "gpi": 45
+      }
+     },
+     "liveIncidents": {
+      "value": 10,
+      "weight": 0.05,
+      "count": 2,
+      "severeCount": 0,
+      "window": "30d"
+     }
+    },
+    "formula": "0.5×editorial + 0.3×authority + 0.15×structural + 0.05×live (renormalized when components missing)",
+    "computedAt": "2026-07-05T21:08:48.626Z"
+   },
+   "advisories": {
+    "fcdo": {
+     "alertStatus": [],
+     "summary": "FCDO travel advice for France. Includes safety and security, insurance, entry requirements and legal differences.",
+     "changeDescription": "Removal of information about G7 Summit and related disruption ('Warnings and insurance' page).",
+     "url": "https://www.gov.uk/foreign-travel-advice/france",
+     "updatedAt": "2026-06-19T13:20:15+00:00",
+     "lastChecked": "2026-06-20T14:00:34.981+00:00"
+    },
+    "usState": {
+     "level": 2,
+     "url": "https://travel.state.gov/en/international-travel/travel-advisories/france.html",
+     "updatedAt": "2025-05-28T00:00:00+00:00",
+     "lastChecked": "2026-05-26T14:30:25.259+00:00"
+    },
+    "liveScoreModifier": 20,
+    "modifierReason": "US State Level 2 (Exercise Increased Caution)",
+    "computedAt": "2026-07-05T21:08:48.626Z",
+    "recentChange": null
+   },
+   "drug_law": {
+    "tier": "moderate",
+    "cannabis": "illegal",
+    "note": "Possession typically a 200€ fixed fine (\"amende forfaitaire\"); prosecution possible. Hard drugs are class A, harsh sentences. Codeine OTC needs prescription if entering with quantity."
+   },
+   "lgbtq": {
+    "legal": "marriage",
+    "social": "progressive",
+    "note": "Same-sex marriage since 2013. Paris and major cities openly accepting; rural areas more reserved but rarely hostile to visitors."
+   },
+   "womens_safety": {
+    "rating": "Generally Safe",
+    "text": "France is safe for women travelers. Catcalling occurs but is less prevalent than in some Mediterranean countries and was criminalized in 2018. The Paris metro is safe but can be uncomfortable when crowded – stay alert. Avoid walking alone late at night in poorly lit areas or around Gare du Nord. The so-called 'no-go zones' reported in some media are exaggerated – they are working-class suburbs, not war zones, but may feel unfamiliar to tourists."
+   },
+   "peace_index": {
+    "rank": 74,
+    "score": 1.967,
+    "year": 2025,
+    "source": "Institute for Economics & Peace, Global Peace Index 2025",
+    "url": "https://www.visionofhumanity.org/maps/"
+   },
+   "quick_facts": {
+    "p": "C/E",
+    "v": "230V/50Hz",
+    "tz": "UTC+1",
+    "d": "R",
+    "w": "s"
+   }
+  }
+ }
+}
