@@ -110,6 +110,11 @@ def normalize_listing(listing: dict, query: StaysQuery) -> Optional[dict]:
     rating = float(rating_match.group(1)) if rating_match else None
     reviews = int(rating_match.group(2).replace(",", "")) if rating_match else 0
 
+    # The listing's map position, so a stay's distance from its place can be checked (TP-06 H8).
+    coordinate = _dig(listing, "demandStayListing", "location", "coordinate") or {}
+    lat, lng = coordinate.get("latitude"), coordinate.get("longitude")
+    location = {"lat": lat, "lng": lng} if all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in (lat, lng)) else None
+
     return {
         "id": listing_id,
         "name": _dig(listing, "demandStayListing", "description", "name", "localizedStringWithTranslationPreference")
@@ -124,6 +129,7 @@ def normalize_listing(listing: dict, query: StaysQuery) -> Optional[dict]:
         "rating": rating,
         "reviews": reviews,
         "photos": _photos(listing),
+        "location": location,
     }
 
 

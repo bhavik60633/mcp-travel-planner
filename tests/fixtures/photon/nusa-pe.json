@@ -1,0 +1,359 @@
+{
+ "query": "nusa pe",
+ "params": {
+  "q": "nusa pe",
+  "lang": "en",
+  "limit": 12
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 20447256,
+     "osm_key": "place",
+     "osm_value": "town",
+     "type": "city",
+     "name": "Nusa Penida",
+     "county": "Klungkung Regency",
+     "state": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extra": {
+      "admin_level": "6"
+     },
+     "extent": [
+      115.427074,
+      -8.663057,
+      115.630482,
+      -8.819542
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.535494,
+      -8.7445295
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 700932990,
+     "osm_key": "place",
+     "osm_value": "islet",
+     "type": "other",
+     "name": "Nusa Peropa",
+     "city": "Golo Mori",
+     "county": "Manggarai Barat",
+     "state": "East Nusa Tenggara",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extent": [
+      119.8115703,
+      -8.7813471,
+      119.8124152,
+      -8.7833577
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      119.8120468,
+      -8.7822722
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 2396778,
+     "osm_key": "place",
+     "osm_value": "state",
+     "type": "state",
+     "name": "East Nusa Tenggara",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extra": {
+      "admin_level": "4"
+     },
+     "extent": [
+      118.3710228,
+      -6.7574264,
+      125.5500847,
+      -11.2085669
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      120.6978581,
+      -8.5656787
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 3236970,
+     "osm_key": "place",
+     "osm_value": "island",
+     "type": "other",
+     "name": "Penida Island",
+     "city": "Nusa Penida",
+     "county": "Klungkung Regency",
+     "state": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extent": [
+      115.4467004,
+      -8.6717048,
+      115.6285502,
+      -8.8194996
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.5346805,
+      -8.7455877
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 9830649,
+     "osm_key": "place",
+     "osm_value": "island",
+     "type": "other",
+     "name": "Nusa Lembongan",
+     "district": "Jungutbatu",
+     "city": "Nusa Penida",
+     "county": "Klungkung Regency",
+     "state": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extent": [
+      115.4269779,
+      -8.6631282,
+      115.4731194,
+      -8.6945206
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.4573313,
+      -8.6789419
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 7219477,
+     "osm_key": "place",
+     "osm_value": "island",
+     "type": "other",
+     "name": "Flores",
+     "state": "East Nusa Tenggara",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extent": [
+      119.7958472,
+      -8.0634936,
+      123.0210355,
+      -8.9565763
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      120.5980947,
+      -8.5100368
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 1053165751,
+     "osm_key": "amenity",
+     "osm_value": "university",
+     "type": "house",
+     "name": "Universitas Nusa Cendana",
+     "street": "Jalan Adi Sucipto",
+     "district": "Oesapa",
+     "city": "Kupang",
+     "state": "East Nusa Tenggara",
+     "country": "Indonesia",
+     "postcode": "86531",
+     "countrycode": "ID",
+     "extent": [
+      123.6583221,
+      -10.1474235,
+      123.6728972,
+      -10.1574563
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      123.6656255,
+      -10.1524953
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 1271852071,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Nusa",
+     "county": "Timor Tengah Selatan",
+     "state": "East Nusa Tenggara",
+     "country": "Indonesia",
+     "countrycode": "ID"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      124.3945525,
+      -9.8484638
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 9904711,
+     "osm_key": "place",
+     "osm_value": "island",
+     "type": "other",
+     "name": "Ceningan Island",
+     "district": "Ceningan Kangin",
+     "city": "Nusa Penida",
+     "county": "Klungkung Regency",
+     "state": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extent": [
+      115.4369842,
+      -8.6870804,
+      115.4658982,
+      -8.7124621
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.4514739,
+      -8.6997653
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 1124429608,
+     "osm_key": "tourism",
+     "osm_value": "museum",
+     "type": "house",
+     "name": "Museum Daerah Nusa Tenggara Timur",
+     "street": "Jalan Frans-Seda",
+     "locality": "Perumahan Artha Graha",
+     "district": "Kec. Kelapa Lima",
+     "city": "Kupang",
+     "state": "East Nusa Tenggara",
+     "country": "Indonesia",
+     "postcode": "85228",
+     "countrycode": "ID",
+     "extent": [
+      123.6193577,
+      -10.1586958,
+      123.6198459,
+      -10.1592203
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      123.6196131,
+      -10.1589523
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 239790191,
+     "osm_key": "place",
+     "osm_value": "islet",
+     "type": "other",
+     "name": "Nusa Batuabah",
+     "district": "Pejukutan",
+     "city": "Nusa Penida",
+     "county": "Klungkung Regency",
+     "state": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extent": [
+      115.6289805,
+      -8.7761111,
+      115.6304947,
+      -8.7790089
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.6301308,
+      -8.777579
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 6371447710,
+     "osm_key": "place",
+     "osm_value": "hamlet",
+     "type": "district",
+     "name": "Nusa Damai",
+     "city": "Desa Pelangan",
+     "county": "Lombok Barat",
+     "state": "West Nusa Tenggara",
+     "country": "Indonesia",
+     "postcode": "83365",
+     "countrycode": "ID"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.9304384,
+      -8.7937676
+     ]
+    }
+   }
+  ]
+ }
+}

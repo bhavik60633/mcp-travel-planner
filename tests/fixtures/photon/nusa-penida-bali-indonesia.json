@@ -1,0 +1,46 @@
+{
+ "query": "Nusa Penida, Bali, Indonesia",
+ "params": {
+  "q": "Nusa Penida, Bali, Indonesia",
+  "lang": "en",
+  "limit": 1
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 20447256,
+     "osm_key": "place",
+     "osm_value": "town",
+     "type": "city",
+     "name": "Nusa Penida",
+     "county": "Klungkung Regency",
+     "state": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extra": {
+      "admin_level": "6"
+     },
+     "extent": [
+      115.427074,
+      -8.663057,
+      115.630482,
+      -8.819542
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.535494,
+      -8.7445295
+     ]
+    }
+   }
+  ]
+ }
+}

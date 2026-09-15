@@ -1,0 +1,369 @@
+{
+ "query": "bali",
+ "params": {
+  "q": "bali",
+  "lang": "en",
+  "limit": 12
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 1615621,
+     "osm_key": "place",
+     "osm_value": "state",
+     "type": "state",
+     "name": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extra": {
+      "admin_level": "4"
+     },
+     "extent": [
+      114.4126778,
+      -7.4627963,
+      115.8324222,
+      -9.0502287
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.1919203,
+      -8.2271303
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 2130352,
+     "osm_key": "place",
+     "osm_value": "island",
+     "type": "other",
+     "name": "Bali Island",
+     "state": "Bali",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extent": [
+      114.4315643,
+      -8.0615889,
+      115.7114992,
+      -8.8500253
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.2704299,
+      -8.4557209
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 2878926,
+     "osm_key": "place",
+     "osm_value": "suburb",
+     "type": "district",
+     "name": "Bali",
+     "city": "New Taipei",
+     "country": "Taiwan",
+     "countrycode": "TW",
+     "extra": {
+      "admin_level": "7"
+     },
+     "extent": [
+      121.3662662,
+      25.1754982,
+      121.460927,
+      25.0798458
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      121.4035113,
+      25.1456917
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 3837903,
+     "osm_key": "place",
+     "osm_value": "town",
+     "type": "city",
+     "name": "Bali",
+     "county": "Mezam",
+     "state": "Northwest",
+     "country": "Cameroon",
+     "countrycode": "CM",
+     "extra": {
+      "admin_level": "8"
+     },
+     "extent": [
+      9.9350936,
+      5.9365746,
+      10.0771626,
+      5.8128273
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      10.011026,
+      5.887897
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 529116037,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Balin",
+     "county": "Poddębice County",
+     "state": "Łódź Voivodeship",
+     "country": "Poland",
+     "postcode": "99-200",
+     "countrycode": "PL"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      18.8192247,
+      51.9377824
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "N",
+     "osm_id": 12055167875,
+     "osm_key": "place",
+     "osm_value": "island",
+     "type": "other",
+     "name": "Bali Island",
+     "city": "Penebel",
+     "county": "Tabanan",
+     "state": "Bali",
+     "country": "Indonesia",
+     "postcode": "82152",
+     "countrycode": "ID"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.1264298,
+      -8.3424944
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 287931,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Balinghem",
+     "county": "Pas-de-Calais",
+     "state": "Hauts-de-France",
+     "country": "France",
+     "postcode": "62610",
+     "countrycode": "FR",
+     "extra": {
+      "admin_level": "8"
+     },
+     "extent": [
+      1.9120419,
+      50.8828771,
+      1.9628835,
+      50.8426082
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      1.9435057,
+      50.8606589
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 2146999,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Baliracq-Maumusson",
+     "county": "Pyrénées-Atlantiques",
+     "state": "Nouvelle-Aquitaine",
+     "country": "France",
+     "postcode": "64330",
+     "countrycode": "FR",
+     "extra": {
+      "admin_level": "8"
+     },
+     "extent": [
+      -0.2631942,
+      43.560527,
+      -0.23664,
+      43.523912
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      -0.2545832,
+      43.5454417
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 2812075,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Baliros",
+     "county": "Pyrénées-Atlantiques",
+     "state": "Nouvelle-Aquitaine",
+     "country": "France",
+     "postcode": "64510",
+     "countrycode": "FR",
+     "extra": {
+      "admin_level": "8"
+     },
+     "extent": [
+      -0.325167,
+      43.244388,
+      -0.2923849,
+      43.218488
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      -0.3067486,
+      43.2275722
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 963197,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Balizac",
+     "county": "Gironde",
+     "state": "Nouvelle-Aquitaine",
+     "country": "France",
+     "postcode": "33730",
+     "countrycode": "FR",
+     "extra": {
+      "admin_level": "8"
+     },
+     "extent": [
+      -0.5013195,
+      44.5240352,
+      -0.3985621,
+      44.4514606
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      -0.4431809,
+      44.4874616
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 1927538,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "city",
+     "name": "Balignicourt",
+     "county": "Aube",
+     "state": "Grand Est",
+     "country": "France",
+     "postcode": "10330",
+     "countrycode": "FR",
+     "extra": {
+      "admin_level": "8"
+     },
+     "extent": [
+      4.4214938,
+      48.5543039,
+      4.4901511,
+      48.5036948
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      4.4596631,
+      48.5151142
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 14921096,
+     "osm_key": "place",
+     "osm_value": "city",
+     "type": "city",
+     "name": "Balikpapan",
+     "state": "East Kalimantan",
+     "country": "Indonesia",
+     "countrycode": "ID",
+     "extra": {
+      "admin_level": "5"
+     },
+     "extent": [
+      116.7287975,
+      -1.013304,
+      117.022665,
+      -1.2823322
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      116.8593379,
+      -1.2398711
+     ]
+    }
+   }
+  ]
+ }
+}

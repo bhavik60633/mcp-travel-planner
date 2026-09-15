@@ -54,7 +54,7 @@ def test_A1_each_days_visits_are_read_as_day_start_end_and_place():
     itinerary = (
         "A 2-day plan.\n\n"
         "## Day 1: Pink City\n"
-        "- 09:00–11:00: **Hawa Mahal** — see the windows.\n"
+        "- 09:00–11:00: **Hawa Mahal** - see the windows.\n"
         "* 11:30 - 12:30: **Tapri Central**\n"
         "12:45–13:15 **Lassiwala** for a lassi\n"
         "- **Evening:** free time\n"
@@ -79,8 +79,8 @@ def test_A1_visits_with_a_few_words_before_the_place_are_read_too():
 
     itinerary = (
         "## Day 1: Pink City\n"
-        "12:30–13:30: Lunch at **LMB (Laxmi Misthan Bhandar)** — dal baati churma.\n"
-        "16:00–17:00: Coffee break at **Tapri Central** — rooftop chai.\n"
+        "12:30–13:30: Lunch at **LMB (Laxmi Misthan Bhandar)** - dal baati churma.\n"
+        "16:00–17:00: Coffee break at **Tapri Central** - rooftop chai.\n"
     )
 
     assert [(v.start, v.end, v.place) for v in read_visits(itinerary)] == [
@@ -94,26 +94,26 @@ def test_A1_a_named_place_made_of_common_words_still_counts():
     from places.extract import named_places
     from places.schedule import read_visits
 
-    itinerary = "## Day 1: Pink City\n11:00–12:30: **City Palace** — the royal museum.\n- Rest at the **hotel**.\n- Walk through the **Old City**.\n"
+    itinerary = "## Day 1: Pink City\n11:00–12:30: **City Palace** - the royal museum.\n- Rest at the **hotel**.\n- Walk through the **Old City**.\n"
 
     assert named_places(itinerary) == ["City Palace", "Old City"]
     assert [v.place for v in read_visits(itinerary)] == ["City Palace"]
 
 
 def test_A1_visits_with_the_time_range_in_bold_are_read_too():
-    # Found on Render on 15 Sep 2026: gpt-4o-mini wrote "**09:00–11:00**: **Amber Fort** — …", and no visits were read.
+    # Found on Render on 15 Sep 2026: gpt-4o-mini wrote "**09:00–11:00**: **Amber Fort** - …", and no visits were read.
     from places.schedule import read_visits, rewrite_visit
 
     itinerary = (
         "### Day 1: October 5, 2026 (Clear Day)\n"
-        "**09:00–11:00**: **Amber Fort** — the fort.\n"
-        "- **13:30–14:30**: Lunch at **The Royal Treat** — thali.\n"
+        "**09:00–11:00**: **Amber Fort** - the fort.\n"
+        "- **13:30–14:30**: Lunch at **The Royal Treat** - thali.\n"
         "**21:30**: Return to **House of Mysa**.\n"
     )
 
     visits = read_visits(itinerary)
     assert [(v.start, v.end, v.place) for v in visits] == [("09:00", "11:00", "Amber Fort"), ("13:30", "14:30", "The Royal Treat")]
-    assert "**10:00–12:00**: **Amber Fort** — the fort." in rewrite_visit(itinerary, visits[0], 600, 720, "Amber Fort")
+    assert "**10:00–12:00**: **Amber Fort** - the fort." in rewrite_visit(itinerary, visits[0], 600, 720, "Amber Fort")
 
 
 # --------------------------------------------------------------------------- A2
@@ -148,7 +148,7 @@ def test_A2_within_7_days_the_hours_for_that_exact_date_are_used_including_speci
 def test_A3_a_visit_inside_the_places_hours_is_open_at_this_time(review_client, monkeypatch):
     client = review_client(google())
 
-    body = plan(client, monkeypatch, "## Day 1: Pink City\n- 09:00–11:00: **Hawa Mahal** — windows.\n- 11:30–12:30: **Tapri Central** — chai.\n")
+    body = plan(client, monkeypatch, "## Day 1: Pink City\n- 09:00–11:00: **Hawa Mahal** - windows.\n- 11:30–12:30: **Tapri Central** - chai.\n")
 
     assert body["visits"] == [
         {"day": 1, "date": "2026-10-19", "start": "09:00", "end": "11:00", "planned_start": "09:00", "planned_end": "11:00",
@@ -164,18 +164,18 @@ def test_A3_a_visit_inside_the_places_hours_is_open_at_this_time(review_client, 
 def test_A4_a_visit_before_opening_moves_to_the_opening_time_keeping_its_length(review_client, monkeypatch):
     client = review_client(google())
 
-    body = plan(client, monkeypatch, "## Day 1: Museums\n- 08:00–09:30: **Albert Hall Museum** — galleries.\n- 12:00–13:00: **Tapri Central** — lunch.\n")
+    body = plan(client, monkeypatch, "## Day 1: Museums\n- 08:00–09:30: **Albert Hall Museum** - galleries.\n- 12:00–13:00: **Tapri Central** - lunch.\n")
 
     assert timing(body)[0] == ("10:00", "11:30", "Albert Hall Museum", "time_changed", "Open 10:00 AM – 5:00 PM", "Time changed: opens 10:00 AM")
     assert (body["visits"][0]["planned_start"], body["visits"][0]["planned_end"]) == ("08:00", "09:30")
-    assert "- 10:00–11:30: **Albert Hall Museum** — galleries." in body["itinerary"]
+    assert "- 10:00–11:30: **Albert Hall Museum** - galleries." in body["itinerary"]
     assert "08:00–09:30" not in body["itinerary"]
 
 
 def test_A4_a_visit_after_closing_moves_earlier_to_end_at_closing_time(review_client, monkeypatch):
     client = review_client(google())
 
-    body = plan(client, monkeypatch, "## Day 1: Museums\n- 16:30–18:00: **Albert Hall Museum** — galleries.\n")
+    body = plan(client, monkeypatch, "## Day 1: Museums\n- 16:30–18:00: **Albert Hall Museum** - galleries.\n")
 
     assert timing(body) == [("15:30", "17:00", "Albert Hall Museum", "time_changed", "Open 10:00 AM – 5:00 PM", "Time changed: closes 5:00 PM")]
     assert "- 15:30–17:00: **Albert Hall Museum**" in body["itinerary"]
@@ -183,7 +183,7 @@ def test_A4_a_visit_after_closing_moves_earlier_to_end_at_closing_time(review_cl
 
 def test_A4_a_visit_isnt_moved_onto_another_visit_and_is_labelled_closed_at_this_time(review_client, monkeypatch):
     client = review_client(google())
-    itinerary = "## Day 1: Museums\n- 08:00–09:30: **Albert Hall Museum** — galleries.\n- 10:30–11:30: **Tapri Central** — chai.\n"
+    itinerary = "## Day 1: Museums\n- 08:00–09:30: **Albert Hall Museum** - galleries.\n- 10:30–11:30: **Tapri Central** - chai.\n"
 
     body = plan(client, monkeypatch, itinerary)
 
@@ -202,11 +202,11 @@ def test_A5_a_place_closed_all_that_day_is_replaced_once_with_one_open_at_that_t
         asked.append((name, reason))
         return "Albert Hall Museum"
 
-    body = plan(client, monkeypatch, "## Day 1: Museums\n- 11:00–12:00: **Rajasthan Museum** — Rajput art.\n", replacement=replacement)
+    body = plan(client, monkeypatch, "## Day 1: Museums\n- 11:00–12:00: **Rajasthan Museum** - Rajput art.\n", replacement=replacement)
 
     assert asked == [("Rajasthan Museum", "closed on Monday")]
     assert timing(body) == [("11:00", "12:00", "Albert Hall Museum", "replaced", "Open 10:00 AM – 5:00 PM", "Suggested instead of a place that's closed on Monday")]
-    assert "- 11:00–12:00: **Albert Hall Museum** — Rajput art." in body["itinerary"]
+    assert "- 11:00–12:00: **Albert Hall Museum** - Rajput art." in body["itinerary"]
     assert "Rajasthan Museum" not in body["itinerary"]
     places = {place["query"]: place for place in body["places"]}
     assert (places["Albert Hall Museum"]["status"], places["Albert Hall Museum"]["replaces"], places["Albert Hall Museum"]["reason"]) == ("replaced", "Rajasthan Museum", "closed on Monday")
@@ -216,7 +216,7 @@ def test_A5_a_place_closed_all_that_day_is_replaced_once_with_one_open_at_that_t
 def test_A5_if_the_replacement_is_closed_too_the_place_is_labelled_closed_on_that_day(review_client, monkeypatch):
     client = review_client(google())
     asked = []
-    itinerary = "## Day 1: Museums\n- 11:00–12:00: **Rajasthan Museum** — Rajput art.\n"
+    itinerary = "## Day 1: Museums\n- 11:00–12:00: **Rajasthan Museum** - Rajput art.\n"
 
     body = plan(client, monkeypatch, itinerary, replacement=lambda name, reason: asked.append(name) or "Anokhi Museum")
 
@@ -231,7 +231,7 @@ def test_A5_if_the_replacement_is_closed_too_the_place_is_labelled_closed_on_tha
 def test_A6_open_24_hours_and_hours_not_listed_are_never_closed(review_client, monkeypatch):
     client = review_client(google())
 
-    body = plan(client, monkeypatch, "## Day 1: Views\n- 06:00–07:00: **Jaipur Junction** — trains.\n- 17:30–18:30: **Nahargarh Viewpoint** — sunset.\n")
+    body = plan(client, monkeypatch, "## Day 1: Views\n- 06:00–07:00: **Jaipur Junction** - trains.\n- 17:30–18:30: **Nahargarh Viewpoint** - sunset.\n")
 
     assert timing(body) == [
         ("06:00", "07:00", "Jaipur Junction", "open_24_hours", "Open 24 hours", "Open at this time"),
@@ -271,16 +271,16 @@ def test_A8_changed_times_and_replacements_are_in_the_itinerary_text_and_in_plac
     client = review_client(google())
     itinerary = (
         "A 2-day plan for Jaipur.\n\n"
-        "## Day 1: Museums\n- 08:00–09:30: **Albert Hall Museum** — galleries.\n- 12:00–13:00: **Rajasthan Museum** — Rajput art.\n\n"
-        "## Day 2: Old City\n- 09:00–11:00: **Hawa Mahal** — windows.\n"
+        "## Day 1: Museums\n- 08:00–09:30: **Albert Hall Museum** - galleries.\n- 12:00–13:00: **Rajasthan Museum** - Rajput art.\n\n"
+        "## Day 2: Old City\n- 09:00–11:00: **Hawa Mahal** - windows.\n"
     )
 
     body = plan(client, monkeypatch, itinerary, replacement=lambda name, reason: "Tapri Central")
 
     assert body["itinerary"] == (
         "A 2-day plan for Jaipur.\n\n"
-        "## Day 1: Museums\n- 10:00–11:30: **Albert Hall Museum** — galleries.\n- 12:00–13:00: **Tapri Central** — Rajput art.\n\n"
-        "## Day 2: Old City\n- 09:00–11:00: **Hawa Mahal** — windows.\n"
+        "## Day 1: Museums\n- 10:00–11:30: **Albert Hall Museum** - galleries.\n- 12:00–13:00: **Tapri Central** - Rajput art.\n\n"
+        "## Day 2: Old City\n- 09:00–11:00: **Hawa Mahal** - windows.\n"
     )
     assert [(v["day"], v["date"], v["start"], v["end"], v["place"], v["status"]) for v in body["visits"]] == [
         (1, "2026-10-19", "10:00", "11:30", "Albert Hall Museum", "time_changed"),

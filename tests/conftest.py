@@ -86,8 +86,9 @@ def offline_trip_info_and_place_checks(request):
 
         import main
         from places.service import PlaceChecker, get_place_checker
-        from tripinfo.api import get_trip_info_service
+        from tripinfo.api import get_place_suggester, get_trip_info_service
         from tripinfo.service import TripInfoService
+        from tripinfo.suggest import PlaceSuggester
     except ImportError:  # before TP-04 is built
         yield
         return
@@ -95,11 +96,14 @@ def offline_trip_info_and_place_checks(request):
     offline = httpx.Client(transport=httpx.MockTransport(lambda req: httpx.Response(503, json={"error": "offline test"})))
     trip_info = TripInfoService(http_client=offline, deadline_s=1.0)
     checker = PlaceChecker(google=None)
+    suggester = PlaceSuggester(http_client=offline, timeout_s=1.0)  # TP-06: Photon
     main.app.dependency_overrides.setdefault(get_trip_info_service, lambda: trip_info)
     main.app.dependency_overrides.setdefault(get_place_checker, lambda: checker)
+    main.app.dependency_overrides.setdefault(get_place_suggester, lambda: suggester)
     yield
     main.app.dependency_overrides.pop(get_trip_info_service, None)
     main.app.dependency_overrides.pop(get_place_checker, None)
+    main.app.dependency_overrides.pop(get_place_suggester, None)
 
 
 GOOGLE_TEST_KEY = "google-test-key-for-yori-tp05-0000"

@@ -1,0 +1,47 @@
+{
+ "query": "Ubud, Bali, Indonesia",
+ "params": {
+  "q": "Ubud, Bali, Indonesia",
+  "lang": "en",
+  "limit": 1
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "W",
+     "osm_id": 284575978,
+     "osm_key": "tourism",
+     "osm_value": "attraction",
+     "type": "house",
+     "name": "Puri Saren Agung Ubud Palace",
+     "street": "Jalan Raya Ubud",
+     "district": "Ubud",
+     "city": "Ubud District",
+     "county": "Gianyar",
+     "state": "Bali",
+     "country": "Indonesia",
+     "postcode": "80571",
+     "countrycode": "ID",
+     "extent": [
+      115.2624577,
+      -8.5065123,
+      115.2629564,
+      -8.506934
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.262707,
+      -8.5067232
+     ]
+    }
+   }
+  ]
+ }
+}

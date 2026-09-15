@@ -1,0 +1,48 @@
+{
+ "query": "Canggu, Bali, Indonesia",
+ "params": {
+  "q": "Canggu, Bali, Indonesia",
+  "lang": "en",
+  "limit": 1
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "osm_type": "R",
+     "osm_id": 17840125,
+     "osm_key": "place",
+     "osm_value": "village",
+     "type": "district",
+     "name": "Canggu",
+     "city": "North Kuta",
+     "county": "Badung",
+     "state": "Bali",
+     "country": "Indonesia",
+     "postcode": "80363",
+     "countrycode": "ID",
+     "extra": {
+      "admin_level": "7"
+     },
+     "extent": [
+      115.1243746,
+      -8.616308,
+      115.157234,
+      -8.663549
+     ]
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      115.1436048,
+      -8.6399025
+     ]
+    }
+   }
+  ]
+ }
+}

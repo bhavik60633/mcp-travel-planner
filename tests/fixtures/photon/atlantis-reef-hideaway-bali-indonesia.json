@@ -1,0 +1,14 @@
+{
+ "query": "Atlantis Reef Hideaway, Bali, Indonesia",
+ "params": {
+  "q": "Atlantis Reef Hideaway, Bali, Indonesia",
+  "lang": "en",
+  "limit": 1
+ },
+ "saved": "2026-09-15",
+ "status": 200,
+ "body": {
+  "type": "FeatureCollection",
+  "features": []
+ }
+}

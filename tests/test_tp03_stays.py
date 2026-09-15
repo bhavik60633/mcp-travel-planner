@@ -106,6 +106,7 @@ def test_E1_stays_come_from_the_airbnb_server_and_are_cached_for_30_minutes(stay
         "rating": 4.92,
         "reviews": 118,
         "photos": [],  # added by TP-04 A1: every stay has a photo list
+        "location": {"lat": 15.5186, "lng": 73.7625},  # added by TP-06 H8: the listing's map position
     }
     new_place = body["stays"][1]
     assert (new_place["total_price"], new_place["price_per_night"]) == (27500, 5500)

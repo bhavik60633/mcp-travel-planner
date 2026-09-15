@@ -73,13 +73,15 @@ def parse_budget(params, query: StaysQuery, service: StaysService) -> Optional[d
     """The most per night for this search: the traveller's own limit, or the trip budget's share (TP-05 D1, D2)."""
     max_per_night = _whole_number(params.get("max_per_night"), "The most per night must be a whole number above 0.")
     trip_budget = _whole_number(params.get("trip_budget"), "The trip budget must be a whole number above 0.")
+    # A place on a trip with several places shares the whole trip's nightly limit (TP-06 D12, H9).
+    trip_nights = _whole_number(params.get("trip_nights"), "Trip nights must be a whole number above 0.")
     budget = None
     if trip_budget:
         budget = nightly_stay_budget(
             trip_budget,
             (params.get("budget_currency") or "INR").strip(),
             (params.get("trip_type") or "Standard").strip(),
-            query.nights,
+            trip_nights or query.nights,
             rate_to_inr=service.rate_to_inr,
         )
     if max_per_night:

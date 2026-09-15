@@ -346,6 +346,55 @@ class FakeGooglePlaces:
         return [r.url.path.rsplit("/", 1)[1] for r in self.requests if r.url.path.startswith("/v1/places/")]
 
 
+PHOTON_FIXTURES = FIXTURES / "photon"
+
+
+class FakePhoton:
+    """Stands in for Photon (TP-06), replaying its real replies saved on 15 Sep 2026 in fixtures/photon.
+
+    A query without a saved reply finds nothing. `fail` is an HTTP status, "error" (no connection) or a
+    threading.Event to wait for (a slow Photon).
+    """
+
+    def __init__(self, fail=None):
+        self.fail = fail
+        self.queries: list[str] = []
+        self._lock = threading.Lock()
+
+    def __call__(self, request: httpx.Request) -> httpx.Response:
+        import re
+
+        query = request.url.params.get("q", "")
+        with self._lock:
+            self.queries.append(query)
+        if isinstance(self.fail, threading.Event):
+            self.fail.wait(timeout=30)
+        elif self.fail == "error":
+            raise httpx.ConnectError("simulated: no connection", request=request)
+        elif isinstance(self.fail, int):
+            return httpx.Response(self.fail, json={"error": "simulated"})
+        saved = PHOTON_FIXTURES / (re.sub(r"[^a-z0-9]+", "-", query.lower()).strip("-") + ".json")
+        if not saved.exists():
+            return httpx.Response(200, json={"type": "FeatureCollection", "features": []})
+        reply = json.loads(saved.read_text(encoding="utf-8"))
+        return httpx.Response(reply["status"], json=reply["body"])
+
+
+class ScriptedAgent:
+    """Stands in for the AI (TP-06): answers each prompt with the next reply (the last one repeats) and keeps the prompts."""
+
+    def __init__(self, *replies: str):
+        self.replies = list(replies) or [""]
+        self.prompts: list[str] = []
+
+    def run(self, prompt):
+        from types import SimpleNamespace
+
+        self.prompts.append(prompt)
+        reply = self.replies.pop(0) if len(self.replies) > 1 else self.replies[0]
+        return SimpleNamespace(content=reply)
+
+
 TRIPINFO_FIXTURES = FIXTURES / "tripinfo"
 
 
